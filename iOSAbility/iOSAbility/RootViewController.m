@@ -7,6 +7,8 @@
 
 #import "RootViewController.h"
 
+#import <Masonry/Masonry.h>
+
 #import "RootViewModel.h"
 #import "RowViewModel.h"
 
@@ -24,6 +26,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _viewModel = [RootViewModel new];
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
 }
 
 #pragma mark - Getter
@@ -35,6 +39,9 @@
         [self.view addSubview:_tableView];
         [_tableView registerClass:RowCell.class forCellReuseIdentifier:NSStringFromClass(RowCell.class)];
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.equalTo(self.view);
+        }];
     }
     return _tableView;
 }
@@ -60,6 +67,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    _viewModel.viewModels[indexPath.row].indexPath = indexPath;
     ((RowCell *)cell).viewModel = _viewModel.viewModels[indexPath.row];
 }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		54BB23431E7BA4CC0D80C06D /* libPods-iOSAbility.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E1CA2283D37D6429BE2D0504 /* libPods-iOSAbility.a */; };
 		78DD9D4C2B39C16900C1943F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 78DD9D4B2B39C16900C1943F /* AppDelegate.m */; };
 		78DD9D4F2B39C16900C1943F /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 78DD9D4E2B39C16900C1943F /* SceneDelegate.m */; };
 		78DD9D522B39C16A00C1943F /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78DD9D512B39C16A00C1943F /* RootViewController.m */; };
@@ -23,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11B8CB3CAC089EF15B5926FD /* Pods-iOSAbility.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSAbility.release.xcconfig"; path = "Target Support Files/Pods-iOSAbility/Pods-iOSAbility.release.xcconfig"; sourceTree = "<group>"; };
+		1613359651D31A2B1EBDC992 /* Pods-iOSAbility.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSAbility.debug.xcconfig"; path = "Target Support Files/Pods-iOSAbility/Pods-iOSAbility.debug.xcconfig"; sourceTree = "<group>"; };
 		78DD9D472B39C16900C1943F /* iOSAbility.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSAbility.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78DD9D4A2B39C16900C1943F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		78DD9D4B2B39C16900C1943F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -49,6 +52,7 @@
 		78DD9D772B39CA8300C1943F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "zh-Hans"; path = "zh-Hans.lproj/RowContents.plist"; sourceTree = "<group>"; };
 		78DD9D782B39D08700C1943F /* RowCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RowCell.h; sourceTree = "<group>"; };
 		78DD9D792B39D08700C1943F /* RowCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RowCell.m; sourceTree = "<group>"; };
+		E1CA2283D37D6429BE2D0504 /* libPods-iOSAbility.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOSAbility.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,17 +60,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54BB23431E7BA4CC0D80C06D /* libPods-iOSAbility.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		531C931B5F3F56946F352788 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1613359651D31A2B1EBDC992 /* Pods-iOSAbility.debug.xcconfig */,
+				11B8CB3CAC089EF15B5926FD /* Pods-iOSAbility.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		5C143459C3B9FCF13964B0A8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E1CA2283D37D6429BE2D0504 /* libPods-iOSAbility.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		78DD9D3E2B39C16900C1943F = {
 			isa = PBXGroup;
 			children = (
 				78DD9D492B39C16900C1943F /* iOSAbility */,
 				78DD9D482B39C16900C1943F /* Products */,
+				531C931B5F3F56946F352788 /* Pods */,
+				5C143459C3B9FCF13964B0A8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,6 +146,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 78DD9D602B39C16B00C1943F /* Build configuration list for PBXNativeTarget "iOSAbility" */;
 			buildPhases = (
+				134877A146FE295DEAA848D6 /* [CP] Check Pods Manifest.lock */,
 				78DD9D432B39C16900C1943F /* Sources */,
 				78DD9D442B39C16900C1943F /* Frameworks */,
 				78DD9D452B39C16900C1943F /* Resources */,
@@ -181,6 +206,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		134877A146FE295DEAA848D6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iOSAbility-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		78DD9D432B39C16900C1943F /* Sources */ = {
@@ -285,7 +335,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -341,7 +391,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -352,6 +402,7 @@
 		};
 		78DD9D612B39C16B00C1943F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1613359651D31A2B1EBDC992 /* Pods-iOSAbility.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -379,6 +430,7 @@
 		};
 		78DD9D622B39C16B00C1943F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11B8CB3CAC089EF15B5926FD /* Pods-iOSAbility.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

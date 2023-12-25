@@ -9,6 +9,4 @@
 
 @implementation ScrollUpHideNavigationBarViewModel
 
-@synthesize content;
-
 @end

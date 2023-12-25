@@ -22,7 +22,9 @@
         NSDictionary *rowContents = [NSDictionary dictionaryWithContentsOfFile:path];
         
         _viewModels = [NSMutableArray new];
-        [_viewModels addObject:[[ScrollUpHideNavigationBarViewModel alloc] initWithRowContents:rowContents]];
+//        for (NSUInteger index = 0; index < 100; ++index) {
+            [_viewModels addObject:[[ScrollUpHideNavigationBarViewModel alloc] initWithRowContents:rowContents]];
+//        }
     }
     return self;
 }

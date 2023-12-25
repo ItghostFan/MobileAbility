@@ -15,7 +15,7 @@
 
 - (instancetype)initWithRowContents:(NSDictionary *)rowContents {
     if (self = [super init]) {
-        _content = rowContents[NSStringFromClass(self.class)];
+        self.content = rowContents[NSStringFromClass(self.class)];
     }
     return self;
 }

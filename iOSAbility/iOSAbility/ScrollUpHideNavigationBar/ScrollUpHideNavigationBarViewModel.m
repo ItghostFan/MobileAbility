@@ -7,6 +7,13 @@
 
 #import "ScrollUpHideNavigationBarViewModel.h"
 
+#import "ScrollUpHideNavigationBarController.h"
+
 @implementation ScrollUpHideNavigationBarViewModel
+
+- (void)pushToNavigationController:(UINavigationController *)navigationController {
+    ScrollUpHideNavigationBarController *controller = [ScrollUpHideNavigationBarController new];
+    [navigationController pushViewController:controller animated:YES];
+}
 
 @end

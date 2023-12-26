@@ -5,7 +5,7 @@
 //  Created by ItghostFan on 2023/12/25.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -15,6 +15,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) NSIndexPath *indexPath;
 
 - (instancetype)initWithRowContents:(NSDictionary *)rowContents;
+
+#pragma mark - Subclass
+
+- (void)pushToNavigationController:(UINavigationController *)navigationController;
 
 @end
 

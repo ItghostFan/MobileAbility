@@ -71,4 +71,9 @@
     ((RowCell *)cell).viewModel = _viewModel.viewModels[indexPath.row];
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    [_viewModel.viewModels[indexPath.row] pushToNavigationController:self.navigationController];
+}
+
 @end

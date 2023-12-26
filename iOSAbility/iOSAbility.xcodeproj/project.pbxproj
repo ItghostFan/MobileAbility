@@ -17,7 +17,7 @@
 		78DD9D5D2B39C16B00C1943F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 78DD9D5C2B39C16B00C1943F /* main.m */; };
 		78DD9D652B39C3F900C1943F /* RootViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 78DD9D642B39C3F900C1943F /* RootViewModel.m */; };
 		78DD9D692B39C68800C1943F /* ScrollUpHideNavigationBarViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 78DD9D682B39C68800C1943F /* ScrollUpHideNavigationBarViewModel.m */; };
-		78DD9D6C2B39C6A500C1943F /* ScrollUpHideNavigationBarControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78DD9D6B2B39C6A500C1943F /* ScrollUpHideNavigationBarControllerViewController.m */; };
+		78DD9D6C2B39C6A500C1943F /* ScrollUpHideNavigationBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78DD9D6B2B39C6A500C1943F /* ScrollUpHideNavigationBarController.m */; };
 		78DD9D6F2B39C7B200C1943F /* RowViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 78DD9D6E2B39C7B200C1943F /* RowViewModel.m */; };
 		78DD9D722B39CA6200C1943F /* RowContents.plist in Resources */ = {isa = PBXBuildFile; fileRef = 78DD9D742B39CA6200C1943F /* RowContents.plist */; };
 		78DD9D7A2B39D08700C1943F /* RowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 78DD9D792B39D08700C1943F /* RowCell.m */; };
@@ -42,8 +42,8 @@
 		78DD9D642B39C3F900C1943F /* RootViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewModel.m; sourceTree = "<group>"; };
 		78DD9D672B39C68800C1943F /* ScrollUpHideNavigationBarViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScrollUpHideNavigationBarViewModel.h; sourceTree = "<group>"; };
 		78DD9D682B39C68800C1943F /* ScrollUpHideNavigationBarViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollUpHideNavigationBarViewModel.m; sourceTree = "<group>"; };
-		78DD9D6A2B39C6A500C1943F /* ScrollUpHideNavigationBarControllerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScrollUpHideNavigationBarControllerViewController.h; sourceTree = "<group>"; };
-		78DD9D6B2B39C6A500C1943F /* ScrollUpHideNavigationBarControllerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollUpHideNavigationBarControllerViewController.m; sourceTree = "<group>"; };
+		78DD9D6A2B39C6A500C1943F /* ScrollUpHideNavigationBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScrollUpHideNavigationBarController.h; sourceTree = "<group>"; };
+		78DD9D6B2B39C6A500C1943F /* ScrollUpHideNavigationBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollUpHideNavigationBarController.m; sourceTree = "<group>"; };
 		78DD9D6D2B39C7B200C1943F /* RowViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RowViewModel.h; sourceTree = "<group>"; };
 		78DD9D6E2B39C7B200C1943F /* RowViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RowViewModel.m; sourceTree = "<group>"; };
 		78DD9D732B39CA6200C1943F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = en.lproj/RowContents.plist; sourceTree = "<group>"; };
@@ -133,8 +133,8 @@
 			children = (
 				78DD9D672B39C68800C1943F /* ScrollUpHideNavigationBarViewModel.h */,
 				78DD9D682B39C68800C1943F /* ScrollUpHideNavigationBarViewModel.m */,
-				78DD9D6A2B39C6A500C1943F /* ScrollUpHideNavigationBarControllerViewController.h */,
-				78DD9D6B2B39C6A500C1943F /* ScrollUpHideNavigationBarControllerViewController.m */,
+				78DD9D6A2B39C6A500C1943F /* ScrollUpHideNavigationBarController.h */,
+				78DD9D6B2B39C6A500C1943F /* ScrollUpHideNavigationBarController.m */,
 			);
 			path = ScrollUpHideNavigationBar;
 			sourceTree = "<group>";
@@ -241,7 +241,7 @@
 				78DD9D7A2B39D08700C1943F /* RowCell.m in Sources */,
 				78DD9D522B39C16A00C1943F /* RootViewController.m in Sources */,
 				78DD9D4C2B39C16900C1943F /* AppDelegate.m in Sources */,
-				78DD9D6C2B39C6A500C1943F /* ScrollUpHideNavigationBarControllerViewController.m in Sources */,
+				78DD9D6C2B39C6A500C1943F /* ScrollUpHideNavigationBarController.m in Sources */,
 				78DD9D652B39C3F900C1943F /* RootViewModel.m in Sources */,
 				78DD9D6F2B39C7B200C1943F /* RowViewModel.m in Sources */,
 				78DD9D5D2B39C16B00C1943F /* main.m in Sources */,

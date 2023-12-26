@@ -20,4 +20,8 @@
     return self;
 }
 
+- (void)pushToNavigationController:(UINavigationController *)navigationController {
+    NSAssert(NO, @"%@ Subclass Should Implement %s", NSStringFromClass(self.class), __FUNCTION__);
+}
+
 @end

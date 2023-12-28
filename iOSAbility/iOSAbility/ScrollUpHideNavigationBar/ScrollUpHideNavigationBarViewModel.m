@@ -13,6 +13,7 @@
 
 - (void)pushToNavigationController:(UINavigationController *)navigationController {
     ScrollUpHideNavigationBarController *controller = [ScrollUpHideNavigationBarController new];
+    controller.viewModel = self;
     [navigationController pushViewController:controller animated:YES];
 }
 

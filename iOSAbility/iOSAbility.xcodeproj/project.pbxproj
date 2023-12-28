@@ -21,6 +21,8 @@
 		78DD9D6F2B39C7B200C1943F /* RowViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 78DD9D6E2B39C7B200C1943F /* RowViewModel.m */; };
 		78DD9D722B39CA6200C1943F /* RowContents.plist in Resources */ = {isa = PBXBuildFile; fileRef = 78DD9D742B39CA6200C1943F /* RowContents.plist */; };
 		78DD9D7A2B39D08700C1943F /* RowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 78DD9D792B39D08700C1943F /* RowCell.m */; };
+		78DD9D7E2B3B1D1600C1943F /* ScrollUpHideTableHeadViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 78DD9D7D2B3B1D1600C1943F /* ScrollUpHideTableHeadViewModel.m */; };
+		78DD9D812B3B1D6400C1943F /* ScrollUpHideTableHeadController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78DD9D802B3B1D6400C1943F /* ScrollUpHideTableHeadController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,10 @@
 		78DD9D772B39CA8300C1943F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "zh-Hans"; path = "zh-Hans.lproj/RowContents.plist"; sourceTree = "<group>"; };
 		78DD9D782B39D08700C1943F /* RowCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RowCell.h; sourceTree = "<group>"; };
 		78DD9D792B39D08700C1943F /* RowCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RowCell.m; sourceTree = "<group>"; };
+		78DD9D7C2B3B1D1600C1943F /* ScrollUpHideTableHeadViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScrollUpHideTableHeadViewModel.h; sourceTree = "<group>"; };
+		78DD9D7D2B3B1D1600C1943F /* ScrollUpHideTableHeadViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollUpHideTableHeadViewModel.m; sourceTree = "<group>"; };
+		78DD9D7F2B3B1D6400C1943F /* ScrollUpHideTableHeadController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScrollUpHideTableHeadController.h; sourceTree = "<group>"; };
+		78DD9D802B3B1D6400C1943F /* ScrollUpHideTableHeadController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollUpHideTableHeadController.m; sourceTree = "<group>"; };
 		E1CA2283D37D6429BE2D0504 /* libPods-iOSAbility.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOSAbility.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -105,6 +111,7 @@
 		78DD9D492B39C16900C1943F /* iOSAbility */ = {
 			isa = PBXGroup;
 			children = (
+				78DD9D7B2B3B1CCA00C1943F /* ScrollUpHideTableHeadView */,
 				78DD9D662B39C4CD00C1943F /* ScrollUpHideNavigationBar */,
 				78DD9D4A2B39C16900C1943F /* AppDelegate.h */,
 				78DD9D4B2B39C16900C1943F /* AppDelegate.m */,
@@ -137,6 +144,17 @@
 				78DD9D6B2B39C6A500C1943F /* ScrollUpHideNavigationBarController.m */,
 			);
 			path = ScrollUpHideNavigationBar;
+			sourceTree = "<group>";
+		};
+		78DD9D7B2B3B1CCA00C1943F /* ScrollUpHideTableHeadView */ = {
+			isa = PBXGroup;
+			children = (
+				78DD9D7C2B3B1D1600C1943F /* ScrollUpHideTableHeadViewModel.h */,
+				78DD9D7D2B3B1D1600C1943F /* ScrollUpHideTableHeadViewModel.m */,
+				78DD9D7F2B3B1D6400C1943F /* ScrollUpHideTableHeadController.h */,
+				78DD9D802B3B1D6400C1943F /* ScrollUpHideTableHeadController.m */,
+			);
+			path = ScrollUpHideTableHeadView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,9 +261,11 @@
 				78DD9D4C2B39C16900C1943F /* AppDelegate.m in Sources */,
 				78DD9D6C2B39C6A500C1943F /* ScrollUpHideNavigationBarController.m in Sources */,
 				78DD9D652B39C3F900C1943F /* RootViewModel.m in Sources */,
+				78DD9D7E2B3B1D1600C1943F /* ScrollUpHideTableHeadViewModel.m in Sources */,
 				78DD9D6F2B39C7B200C1943F /* RowViewModel.m in Sources */,
 				78DD9D5D2B39C16B00C1943F /* main.m in Sources */,
 				78DD9D4F2B39C16900C1943F /* SceneDelegate.m in Sources */,
+				78DD9D812B3B1D6400C1943F /* ScrollUpHideTableHeadController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

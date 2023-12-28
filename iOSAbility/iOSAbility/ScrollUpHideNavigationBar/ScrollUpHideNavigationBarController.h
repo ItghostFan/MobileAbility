@@ -9,7 +9,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class ScrollUpHideNavigationBarViewModel;
+
 @interface ScrollUpHideNavigationBarController : UIViewController
+
+@property (weak, nonatomic) ScrollUpHideNavigationBarViewModel *viewModel;
 
 @end
 

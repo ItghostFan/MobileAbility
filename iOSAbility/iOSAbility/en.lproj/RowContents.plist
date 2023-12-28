@@ -4,5 +4,7 @@
 <dict>
 	<key>ScrollUpHideNavigationBarViewModel</key>
 	<string>Scroll Up Hide Navigation Bar</string>
+	<key>ScrollUpHideTableHeadViewModel</key>
+	<string>Scroll Up Hide Table Head</string>
 </dict>
 </plist>

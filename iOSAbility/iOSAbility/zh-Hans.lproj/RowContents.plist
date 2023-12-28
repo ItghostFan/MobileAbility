@@ -4,5 +4,7 @@
 <dict>
 	<key>ScrollUpHideNavigationBarViewModel</key>
 	<string>上滑渐隐导航栏示例</string>
+	<key>ScrollUpHideTableHeadViewModel</key>
+	<string>上滑渐隐TableView Head View示例</string>
 </dict>
 </plist>

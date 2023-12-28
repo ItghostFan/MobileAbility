@@ -9,6 +9,7 @@
 
 #import "RowViewModel.h"
 #import "ScrollUpHideNavigationBarViewModel.h"
+#import "ScrollUpHideTableHeadViewModel.h"
 
 @interface RootViewModel ()
 @property (strong, nonatomic) NSMutableArray<__kindof RowViewModel *> *viewModels;
@@ -22,9 +23,8 @@
         NSDictionary *rowContents = [NSDictionary dictionaryWithContentsOfFile:path];
         
         _viewModels = [NSMutableArray new];
-//        for (NSUInteger index = 0; index < 100; ++index) {
-            [_viewModels addObject:[[ScrollUpHideNavigationBarViewModel alloc] initWithRowContents:rowContents]];
-//        }
+        [_viewModels addObject:[[ScrollUpHideNavigationBarViewModel alloc] initWithRowContents:rowContents]];
+        [_viewModels addObject:[[ScrollUpHideTableHeadViewModel alloc] initWithRowContents:rowContents]];
     }
     return self;
 }

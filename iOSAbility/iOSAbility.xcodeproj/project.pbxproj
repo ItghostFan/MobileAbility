@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		54BB23431E7BA4CC0D80C06D /* libPods-iOSAbility.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E1CA2283D37D6429BE2D0504 /* libPods-iOSAbility.a */; };
+		782DBE7C2B6813F2009A81BD /* RichTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 782DBE7B2B6813F2009A81BD /* RichTextView.m */; };
+		7834C3862B66B6190004C82E /* RichTextController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7834C3852B66B6190004C82E /* RichTextController.m */; };
+		7834C3892B66B6320004C82E /* RichTextViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7834C3882B66B6320004C82E /* RichTextViewModel.m */; };
+		78BF8DBF2B45AC4E0084C0EC /* BannerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78BF8DBE2B45AC4E0084C0EC /* BannerController.m */; };
+		78BF8DC22B45AC5F0084C0EC /* BannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78BF8DC12B45AC5F0084C0EC /* BannerView.m */; };
+		78BF8DD22B46F8C90084C0EC /* BannerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 78BF8DD12B46F8C90084C0EC /* BannerViewModel.m */; };
 		78DD9D4C2B39C16900C1943F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 78DD9D4B2B39C16900C1943F /* AppDelegate.m */; };
 		78DD9D4F2B39C16900C1943F /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 78DD9D4E2B39C16900C1943F /* SceneDelegate.m */; };
 		78DD9D522B39C16A00C1943F /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78DD9D512B39C16A00C1943F /* RootViewController.m */; };
@@ -28,6 +34,18 @@
 /* Begin PBXFileReference section */
 		11B8CB3CAC089EF15B5926FD /* Pods-iOSAbility.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSAbility.release.xcconfig"; path = "Target Support Files/Pods-iOSAbility/Pods-iOSAbility.release.xcconfig"; sourceTree = "<group>"; };
 		1613359651D31A2B1EBDC992 /* Pods-iOSAbility.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSAbility.debug.xcconfig"; path = "Target Support Files/Pods-iOSAbility/Pods-iOSAbility.debug.xcconfig"; sourceTree = "<group>"; };
+		782DBE7A2B6813F2009A81BD /* RichTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RichTextView.h; sourceTree = "<group>"; };
+		782DBE7B2B6813F2009A81BD /* RichTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RichTextView.m; sourceTree = "<group>"; };
+		7834C3842B66B6190004C82E /* RichTextController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RichTextController.h; sourceTree = "<group>"; };
+		7834C3852B66B6190004C82E /* RichTextController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RichTextController.m; sourceTree = "<group>"; };
+		7834C3872B66B6320004C82E /* RichTextViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RichTextViewModel.h; sourceTree = "<group>"; };
+		7834C3882B66B6320004C82E /* RichTextViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RichTextViewModel.m; sourceTree = "<group>"; };
+		78BF8DBD2B45AC4E0084C0EC /* BannerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BannerController.h; sourceTree = "<group>"; };
+		78BF8DBE2B45AC4E0084C0EC /* BannerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BannerController.m; sourceTree = "<group>"; };
+		78BF8DC02B45AC5F0084C0EC /* BannerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BannerView.h; sourceTree = "<group>"; };
+		78BF8DC12B45AC5F0084C0EC /* BannerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BannerView.m; sourceTree = "<group>"; };
+		78BF8DD02B46F8C90084C0EC /* BannerViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BannerViewModel.h; sourceTree = "<group>"; };
+		78BF8DD12B46F8C90084C0EC /* BannerViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BannerViewModel.m; sourceTree = "<group>"; };
 		78DD9D472B39C16900C1943F /* iOSAbility.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSAbility.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78DD9D4A2B39C16900C1943F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		78DD9D4B2B39C16900C1943F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -90,6 +108,32 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7834C3832B66B5EA0004C82E /* RichText */ = {
+			isa = PBXGroup;
+			children = (
+				7834C3842B66B6190004C82E /* RichTextController.h */,
+				7834C3852B66B6190004C82E /* RichTextController.m */,
+				7834C3872B66B6320004C82E /* RichTextViewModel.h */,
+				7834C3882B66B6320004C82E /* RichTextViewModel.m */,
+				782DBE7A2B6813F2009A81BD /* RichTextView.h */,
+				782DBE7B2B6813F2009A81BD /* RichTextView.m */,
+			);
+			path = RichText;
+			sourceTree = "<group>";
+		};
+		78BF8DBC2B45AC0E0084C0EC /* Banner */ = {
+			isa = PBXGroup;
+			children = (
+				78BF8DBD2B45AC4E0084C0EC /* BannerController.h */,
+				78BF8DBE2B45AC4E0084C0EC /* BannerController.m */,
+				78BF8DC02B45AC5F0084C0EC /* BannerView.h */,
+				78BF8DC12B45AC5F0084C0EC /* BannerView.m */,
+				78BF8DD02B46F8C90084C0EC /* BannerViewModel.h */,
+				78BF8DD12B46F8C90084C0EC /* BannerViewModel.m */,
+			);
+			path = Banner;
+			sourceTree = "<group>";
+		};
 		78DD9D3E2B39C16900C1943F = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +155,8 @@
 		78DD9D492B39C16900C1943F /* iOSAbility */ = {
 			isa = PBXGroup;
 			children = (
+				7834C3832B66B5EA0004C82E /* RichText */,
+				78BF8DBC2B45AC0E0084C0EC /* Banner */,
 				78DD9D7B2B3B1CCA00C1943F /* ScrollUpHideTableHeadView */,
 				78DD9D662B39C4CD00C1943F /* ScrollUpHideNavigationBar */,
 				78DD9D4A2B39C16900C1943F /* AppDelegate.h */,
@@ -256,15 +302,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				78DD9D692B39C68800C1943F /* ScrollUpHideNavigationBarViewModel.m in Sources */,
+				78BF8DC22B45AC5F0084C0EC /* BannerView.m in Sources */,
 				78DD9D7A2B39D08700C1943F /* RowCell.m in Sources */,
 				78DD9D522B39C16A00C1943F /* RootViewController.m in Sources */,
+				782DBE7C2B6813F2009A81BD /* RichTextView.m in Sources */,
+				78BF8DBF2B45AC4E0084C0EC /* BannerController.m in Sources */,
+				7834C3892B66B6320004C82E /* RichTextViewModel.m in Sources */,
 				78DD9D4C2B39C16900C1943F /* AppDelegate.m in Sources */,
 				78DD9D6C2B39C6A500C1943F /* ScrollUpHideNavigationBarController.m in Sources */,
 				78DD9D652B39C3F900C1943F /* RootViewModel.m in Sources */,
 				78DD9D7E2B3B1D1600C1943F /* ScrollUpHideTableHeadViewModel.m in Sources */,
 				78DD9D6F2B39C7B200C1943F /* RowViewModel.m in Sources */,
+				78BF8DD22B46F8C90084C0EC /* BannerViewModel.m in Sources */,
 				78DD9D5D2B39C16B00C1943F /* main.m in Sources */,
 				78DD9D4F2B39C16900C1943F /* SceneDelegate.m in Sources */,
+				7834C3862B66B6190004C82E /* RichTextController.m in Sources */,
 				78DD9D812B3B1D6400C1943F /* ScrollUpHideTableHeadController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

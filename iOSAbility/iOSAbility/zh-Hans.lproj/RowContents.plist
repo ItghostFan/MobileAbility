@@ -6,5 +6,9 @@
 	<string>上滑渐隐导航栏示例</string>
 	<key>ScrollUpHideTableHeadViewModel</key>
 	<string>上滑渐隐TableView Head View示例</string>
+	<key>BannerViewModel</key>
+	<string>横幅视图</string>
+	<key>RichTextViewModel</key>
+	<string>富文本</string>
 </dict>
 </plist>

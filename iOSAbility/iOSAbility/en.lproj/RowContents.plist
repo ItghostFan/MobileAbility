@@ -6,5 +6,9 @@
 	<string>Scroll Up Hide Navigation Bar</string>
 	<key>ScrollUpHideTableHeadViewModel</key>
 	<string>Scroll Up Hide Table Head</string>
+	<key>BannerViewModel</key>
+	<string>Banner View</string>
+	<key>RichTextViewModel</key>
+	<string>Rich Text</string>
 </dict>
 </plist>

@@ -16,6 +16,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+//    NSURL *url = [NSURL URLWithString:@"hago://channel/openToolsPanel?id=10000&hide_panel=true&sub_id=1144"];
+    NSURLComponents *components = [NSURLComponents componentsWithString:@"hago://channel/openToolsPanel?id=10000&hide_panel=true&sub_id=1144"];
     return YES;
 }
 

@@ -132,6 +132,21 @@
 
 #pragma mark - Super
 
+
+- (CGSize)intrinsicContentSize {
+    CGRect textRect = [_layoutManager boundingRectForGlyphRange:NSMakeRange(0, _layoutManager.numberOfGlyphs) inTextContainer:_textContainer];
+    return textRect.size;
+}
+
+- (CGSize)sizeThatFits:(CGSize)size {
+    NSTextContainer *textContainer = [[NSTextContainer alloc] initWithSize:size];
+    NSLayoutManager *layoutManager = NSLayoutManager.new;
+    [layoutManager addTextContainer:textContainer];
+    layoutManager.textStorage = _textStorage;
+    CGRect textRect = [layoutManager boundingRectForGlyphRange:NSMakeRange(0, _layoutManager.numberOfGlyphs) inTextContainer:textContainer];
+    return textRect.size;
+}
+
 - (void)layoutSubviews {
     [super layoutSubviews];
     _textContainer.size = self.bounds.size;

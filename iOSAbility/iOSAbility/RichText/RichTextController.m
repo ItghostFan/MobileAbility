@@ -50,6 +50,8 @@
     self.richTextView.font = self.richTextLabel.font;
     self.richTextView.textAlignment = NSTextAlignmentCenter;
     self.richTextView.text = @"这是一个富文本例子！";
+    CGSize size = [self.richTextView intrinsicContentSize];
+    size = [self.richTextView sizeThatFits:CGSizeMake(100.0f, 0.0f)];
 }
 
 #pragma mark - Getter

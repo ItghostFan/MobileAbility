@@ -139,11 +139,9 @@
 }
 
 - (CGSize)sizeThatFits:(CGSize)size {
-    NSTextContainer *textContainer = [[NSTextContainer alloc] initWithSize:size];
-    NSLayoutManager *layoutManager = NSLayoutManager.new;
-    [layoutManager addTextContainer:textContainer];
-    layoutManager.textStorage = _textStorage;
-    CGRect textRect = [layoutManager boundingRectForGlyphRange:NSMakeRange(0, _layoutManager.numberOfGlyphs) inTextContainer:textContainer];
+    _textContainer.size = size;
+    CGRect textRect = [_layoutManager boundingRectForGlyphRange:NSMakeRange(0, _layoutManager.numberOfGlyphs) inTextContainer:_textContainer];
+    _textContainer.size = self.bounds.size;
     return textRect.size;
 }
 

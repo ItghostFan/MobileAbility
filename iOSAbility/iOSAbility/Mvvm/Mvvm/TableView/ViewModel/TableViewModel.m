@@ -38,7 +38,7 @@
     @weakify(self);
     [[[_sectionViewModels rac_valuesAndChangesForKeyPath:@keypath(_sectionViewModels.viewModels)
                                           options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld | NSKeyValueObservingOptionInitial
-                                      observer:self] takeUntil:self.rac_willDeallocSignal] subscribeNext:^(RACTwoTuple<id,NSDictionary *> * _Nullable x) {
+                                      observer:self] takeUntil:_sectionViewModels.rac_willDeallocSignal] subscribeNext:^(RACTwoTuple<id,NSDictionary *> * _Nullable x) {
         RACTupleUnpack(id object OS_UNUSED, NSDictionary *change) = x;
         @strongify(self);
         [self onSectionsChange:change object:self.sectionViewModels observer:self];
@@ -63,9 +63,9 @@
 
 - (void)addKvoSectionViewModel:(BaseViewModels<__kindof TableCellViewModel *> *)viewModel {
     @weakify(self, viewModel);
-    RACDisposable *disposable = [[[viewModel rac_valuesAndChangesForKeyPath:@keypath(viewModel.viewModels)
+    [[[viewModel rac_valuesAndChangesForKeyPath:@keypath(viewModel.viewModels)
                                           options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld | NSKeyValueObservingOptionInitial
-                                      observer:self] takeUntil:self.rac_willDeallocSignal] subscribeNext:^(RACTwoTuple<id,NSDictionary *> * _Nullable x) {
+                                      observer:self] takeUntil:viewModel.rac_willDeallocSignal] subscribeNext:^(RACTwoTuple<id,NSDictionary *> * _Nullable x) {
         RACTupleUnpack(id object OS_UNUSED, NSDictionary *change) = x;
         @strongify(self, viewModel);
         [self onRowsChange:change object:viewModel observer:self];

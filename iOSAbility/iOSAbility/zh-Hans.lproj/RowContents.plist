@@ -10,5 +10,7 @@
 	<string>横幅视图</string>
 	<key>RichTextViewModel</key>
 	<string>富文本</string>
+	<key>MvvmViewModel</key>
+	<string>Mvvm示例</string>
 </dict>
 </plist>

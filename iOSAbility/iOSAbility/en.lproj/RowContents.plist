@@ -10,5 +10,7 @@
 	<string>Banner View</string>
 	<key>RichTextViewModel</key>
 	<string>Rich Text</string>
+	<key>MvvmViewModel</key>
+	<string>Mvvm</string>
 </dict>
 </plist>

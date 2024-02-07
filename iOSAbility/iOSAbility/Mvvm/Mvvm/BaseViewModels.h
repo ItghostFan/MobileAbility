@@ -7,9 +7,11 @@
 
 #import <Foundation/Foundation.h>
 
+#import "BaseViewModel.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
-@interface BaseViewModels<__covariant ObjectType> : NSObject
+@interface BaseViewModels<__covariant ObjectType> : BaseViewModel
 
 @property (strong, nonatomic, readonly) NSArray<ObjectType> *viewModels;
 
@@ -22,6 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)removeViewModel:(ObjectType)viewModel;
 - (void)removeViewModelsAtIndexes:(NSIndexSet *)indexes;
 - (void)removeViewModels:(NSArray<ObjectType> *)viewModels;
+- (void)removeAllViewModels;
 - (ObjectType)objectAtIndexedSubscript:(NSUInteger)idx;
 
 @end

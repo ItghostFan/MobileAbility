@@ -186,18 +186,18 @@ UICollectionViewDelegate>
 #pragma mark - UICollectionViewDelegateFlowLayout
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    CollectionCellViewModel *viewModel = self.sectionViewModels[indexPath.section].viewModels[indexPath.item];
+    CollectionCellViewModel *viewModel = self.sectionViewModels[indexPath.section][indexPath.item];
     return viewModel.cellSize;
 }
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
-    CollectionSectionViewModel *viewModel = self.sectionViewModels[section];
-    return viewModel.minimumInteritemSpacing;
+    CollectionSectionViewModel *sectionViewModel = self.sectionViewModels[section];
+    return sectionViewModel.minimumInteritemSpacing;
 }
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
-    CollectionSectionViewModel *viewModel = self.sectionViewModels[section];
-    return viewModel.minimumLineSpacing;
+    CollectionSectionViewModel *sectionViewModel = self.sectionViewModels[section];
+    return sectionViewModel.minimumLineSpacing;
 }
 
 #pragma mark - UICollectionViewDataSource
@@ -211,18 +211,18 @@ UICollectionViewDelegate>
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    CollectionCellViewModel *viewModel = self.sectionViewModels[indexPath.section].viewModels[indexPath.item];
+    CollectionCellViewModel *viewModel = self.sectionViewModels[indexPath.section][indexPath.item];
     return [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass(viewModel.cellClass) forIndexPath:indexPath];
 }
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
     if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
-        CollectionSectionViewModel *viewModel = self.sectionViewModels[indexPath.section];
-        return [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:NSStringFromClass(viewModel.headerClass) forIndexPath:indexPath];
+        CollectionSectionViewModel *sectionViewModel = self.sectionViewModels[indexPath.section];
+        return [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:NSStringFromClass(sectionViewModel.headerClass) forIndexPath:indexPath];
     }
     if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
-        CollectionSectionViewModel *viewModel = self.sectionViewModels[indexPath.section];
-        return [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:NSStringFromClass(viewModel.footerClass) forIndexPath:indexPath];
+        CollectionSectionViewModel *sectionViewModel = self.sectionViewModels[indexPath.section];
+        return [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:NSStringFromClass(sectionViewModel.footerClass) forIndexPath:indexPath];
     }
     return nil;
 }
@@ -230,24 +230,24 @@ UICollectionViewDelegate>
 #pragma mark - UICollectionViewDelegate
 
 - (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
-    CollectionCellViewModel *viewModel = self.sectionViewModels[indexPath.section].viewModels[indexPath.item];
+    CollectionCellViewModel *viewModel = self.sectionViewModels[indexPath.section][indexPath.item];
     ((CollectionViewCell *)cell).viewModel = viewModel;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView willDisplaySupplementaryView:(UICollectionReusableView *)view forElementKind:(NSString *)elementKind atIndexPath:(NSIndexPath *)indexPath {
     if ([elementKind isEqualToString:UICollectionElementKindSectionHeader]) {
-        CollectionSectionViewModel *viewModel = self.sectionViewModels[indexPath.section];
-        ((CollectionHeaderView *)view).viewModel = viewModel;
+        CollectionSectionViewModel *sectionViewModel = self.sectionViewModels[indexPath.section];
+        ((CollectionHeaderView *)view).viewModel = sectionViewModel;
         return;
     }
     if ([elementKind isEqualToString:UICollectionElementKindSectionHeader]) {
-        CollectionSectionViewModel *viewModel = self.sectionViewModels[indexPath.section];
-        ((CollectionFooterView *)view).viewModel = viewModel;
+        CollectionSectionViewModel *sectionViewModel = self.sectionViewModels[indexPath.section];
+        ((CollectionFooterView *)view).viewModel = sectionViewModel;
     }
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    CollectionCellViewModel *viewModel = self.sectionViewModels[indexPath.section].viewModels[indexPath.item];
+    CollectionCellViewModel *viewModel = self.sectionViewModels[indexPath.section][indexPath.item];
     if ([viewModel.delegate respondsToSelector:@selector(didSelectedViewModel:atIndexPath:)]) {
         [(id<ICellViewModelDelegate>)viewModel.delegate didSelectedViewModel:viewModel atIndexPath:indexPath];
     }

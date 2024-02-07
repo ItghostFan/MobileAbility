@@ -327,14 +327,14 @@
 		78FE687E2B7124F10012D460 /* Mvvm */ = {
 			isa = PBXGroup;
 			children = (
-				78FE687F2B7124F10012D460 /* TableView */,
-				78FE688F2B7124F10012D460 /* BaseViewModels.m */,
-				78FE68A32B7124F10012D460 /* BaseViewModels.h */,
-				78FE68A12B7124F10012D460 /* BaseViewModel.m */,
 				78FE68A42B7124F10012D460 /* BaseViewModel.h */,
-				78FE68912B7124F10012D460 /* CollectionView */,
+				78FE68A12B7124F10012D460 /* BaseViewModel.m */,
+				78FE68A32B7124F10012D460 /* BaseViewModels.h */,
+				78FE688F2B7124F10012D460 /* BaseViewModels.m */,
 				78FE68902B7124F10012D460 /* CellViewModel.h */,
 				78FE68A22B7124F10012D460 /* CellViewModel.m */,
+				78FE68912B7124F10012D460 /* CollectionView */,
+				78FE687F2B7124F10012D460 /* TableView */,
 			);
 			path = Mvvm;
 			sourceTree = "<group>";

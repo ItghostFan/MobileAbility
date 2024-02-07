@@ -59,6 +59,10 @@
     [[self mutableArrayValueForKey:NSStringFromSelector(@selector(viewModels))] removeObjectsInArray:viewModels];
 }
 
+- (void)removeAllViewModels {
+    [[self mutableArrayValueForKey:NSStringFromSelector(@selector(viewModels))] removeAllObjects];
+}
+
 - (id)objectAtIndexedSubscript:(NSUInteger)idx {
     return [self.viewModels objectAtIndex:idx];
 }

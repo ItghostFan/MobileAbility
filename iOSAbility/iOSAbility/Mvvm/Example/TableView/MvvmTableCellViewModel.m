@@ -11,7 +11,7 @@
 
 @implementation MvvmTableCellViewModel
 
-- (Class)cellClass {
+- (Class)tableCellClass {
     return MvvmTableViewModelCell.class;
 }
 

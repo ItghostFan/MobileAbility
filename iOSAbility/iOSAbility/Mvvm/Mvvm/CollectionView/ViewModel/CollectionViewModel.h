@@ -13,11 +13,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class CollectionCellViewModel;
+@class CellViewModel;
 
 @interface CollectionViewModel : BaseViewModel
 
-@property (strong, nonatomic, readonly) BaseViewModels<__kindof CollectionSectionViewModel<__kindof CollectionCellViewModel *> *> *sectionViewModels;
+@property (strong, nonatomic, readonly) BaseViewModels<__kindof CollectionSectionViewModel<__kindof CellViewModel *> *> *sectionViewModels;
 
 @property (weak, nonatomic, nullable) UICollectionView *collectionView;
 

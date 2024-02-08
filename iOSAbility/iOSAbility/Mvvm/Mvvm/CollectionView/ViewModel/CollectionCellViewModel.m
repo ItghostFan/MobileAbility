@@ -7,6 +7,17 @@
 
 #import "CollectionCellViewModel.h"
 
+#import "CollectionViewModelCell.h"
+
+@interface CollectionCellViewModel ()
+
+@end
+
 @implementation CollectionCellViewModel
+
+- (Class)collectionCellClass {
+    NSAssert(NO, @"%@ %s Should Implement By Subclass!", NSStringFromClass(self.class), __FUNCTION__);
+    return CollectionViewModelCell.class;
+}
 
 @end

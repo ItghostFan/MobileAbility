@@ -10,7 +10,7 @@
 #import <ReactiveObjC/ReactiveObjC.h>
 #import <ReactiveObjC/NSObject+RACKVOWrapper.h>
 
-#import "TableCellViewModel.h"
+#import "CellViewModel+TableView.h"
 #import "TableViewModelCell.h"
 #import "TableHeaderView.h"
 #import "TableFooterView.h"
@@ -51,10 +51,10 @@
     _tableView = tableView;
     
     for (TableSectionViewModel *sectionViewModel in _sectionViewModels.viewModels) {
-        [self registerHeaderFooterClass:sectionViewModel.headerClass];
-        [self registerHeaderFooterClass:sectionViewModel.footerClass];
-        for (TableCellViewModel *cellViewModel in sectionViewModel.viewModels) {
-            [self registerCellClass:cellViewModel.cellClass];
+        [self registerHeaderFooterClass:sectionViewModel.tableHeaderClass];
+        [self registerHeaderFooterClass:sectionViewModel.tableFooterClass];
+        for (CellViewModel *cellViewModel in sectionViewModel.viewModels) {
+            [self registerCellClass:cellViewModel.tableCellClass];
         }
     }
     _tableView.delegate = self;
@@ -63,7 +63,7 @@
 
 #pragma mark - KVO Handler
 
-- (void)addKvoSectionViewModel:(BaseViewModels<__kindof TableCellViewModel *> *)viewModel {
+- (void)addKvoSectionViewModel:(BaseViewModels<__kindof CellViewModel *> *)viewModel {
     @weakify(self, viewModel);
     [[[viewModel rac_valuesAndChangesForKeyPath:@keypath(viewModel.viewModels)
                                           options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld | NSKeyValueObservingOptionInitial
@@ -174,20 +174,20 @@
 #pragma mark - UITableViewDelegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [self.sectionViewModels[indexPath.section][indexPath.row] heightForWidth:CGRectGetWidth(tableView.frame)];
+    return [self.sectionViewModels[indexPath.section][indexPath.row] tableCellHeightForWidth:CGRectGetWidth(tableView.frame)];
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    TableCellViewModel *viewModel = self.sectionViewModels[indexPath.section][indexPath.row];
-    ((TableViewModelCell *)cell).viewModel = viewModel;
+    CellViewModel *cellViewModel = self.sectionViewModels[indexPath.section][indexPath.row];
+    ((TableViewModelCell *)cell).viewModel = cellViewModel;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    TableCellViewModel *viewModel = self.sectionViewModels[indexPath.section][indexPath.row];
-    if ([viewModel.delegate respondsToSelector:@selector(didSelectedViewModel:atIndexPath:)]) {
-        [viewModel.delegate didSelectedViewModel:viewModel atIndexPath:indexPath];
+    CellViewModel *cellViewModel = self.sectionViewModels[indexPath.section][indexPath.row];
+    if ([cellViewModel.delegate respondsToSelector:@selector(didSelectedViewModel:atIndexPath:)]) {
+        [cellViewModel.delegate didSelectedViewModel:cellViewModel atIndexPath:indexPath];
     }
-    if (viewModel.deselectAfterDidSelect) {
+    if (cellViewModel.deselectAfterDidSelect) {
         [tableView deselectRowAtIndexPath:indexPath animated:NO];
     }
 }
@@ -196,15 +196,15 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     TableSectionViewModel *sectionViewModel = self.sectionViewModels[section];
-    if (sectionViewModel.headerClass) {
-        return [tableView dequeueReusableHeaderFooterViewWithIdentifier:NSStringFromClass(sectionViewModel.headerClass)];
+    if (sectionViewModel.tableHeaderClass) {
+        return [tableView dequeueReusableHeaderFooterViewWithIdentifier:NSStringFromClass(sectionViewModel.tableHeaderClass)];
     }
     return nil;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     TableSectionViewModel *sectionViewModel = self.sectionViewModels[section];
-    return [sectionViewModel headerHeightForWidth:CGRectGetWidth(tableView.bounds)];
+    return [sectionViewModel tableHeaderHeightForWidth:CGRectGetWidth(tableView.bounds)];
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section {
@@ -216,15 +216,15 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
     TableSectionViewModel *sectionViewModel = self.sectionViewModels[section];
-    if (sectionViewModel.footerClass) {
-        return [tableView dequeueReusableHeaderFooterViewWithIdentifier:NSStringFromClass(sectionViewModel.footerClass)];
+    if (sectionViewModel.tableFooterClass) {
+        return [tableView dequeueReusableHeaderFooterViewWithIdentifier:NSStringFromClass(sectionViewModel.tableFooterClass)];
     }
     return nil;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     TableSectionViewModel *sectionViewModel = self.sectionViewModels[section];
-    return [sectionViewModel footerHeightForWidth:CGRectGetWidth(tableView.bounds)];
+    return [sectionViewModel tableFooterHeightForWidth:CGRectGetWidth(tableView.bounds)];
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayFooterView:(UIView *)view forSection:(NSInteger)section {
@@ -240,8 +240,8 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    TableCellViewModel *viewModel = self.sectionViewModels[indexPath.section][indexPath.row];
-    return [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(viewModel.cellClass) forIndexPath:indexPath];
+    CellViewModel *cellViewModel = self.sectionViewModels[indexPath.section][indexPath.row];
+    return [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(cellViewModel.tableCellClass) forIndexPath:indexPath];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

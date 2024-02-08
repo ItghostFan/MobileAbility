@@ -11,11 +11,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TableSectionViewModel<__covariant ObjectType> : BaseViewModels<ObjectType>
 
-@property (strong, nonatomic, readonly) Class headerClass;
-@property (strong, nonatomic, readonly) Class footerClass;
+@property (strong, nonatomic, readonly) Class tableHeaderClass;
+@property (strong, nonatomic, readonly) Class tableFooterClass;
 
-- (CGFloat)headerHeightForWidth:(CGFloat)width;
-- (CGFloat)footerHeightForWidth:(CGFloat)width;
+- (CGFloat)tableHeaderHeightForWidth:(CGFloat)width;
+- (CGFloat)tableFooterHeightForWidth:(CGFloat)width;
 
 @end
 

@@ -5,13 +5,13 @@
 //  Created by ItghostFan on 2024/2/4.
 //
 
-#import "CellViewModel.h"
+#import "ICollectionCellViewModel.h"
+
+#import "BaseViewModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CollectionCellViewModel : CellViewModel
-
-@property (assign, nonatomic) CGSize cellSize;
+@interface CollectionCellViewModel : BaseViewModel <ICollectionCellViewModel>
 
 @end
 

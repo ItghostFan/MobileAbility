@@ -12,11 +12,11 @@
 
 @implementation MvvmTableSectionViewModel
 
-- (Class)headerClass {
+- (Class)tableHeaderClass {
     return MvvmTableHeaderView.class;
 }
 
-- (Class)footerClass {
+- (Class)tableFooterClass {
     return MvvmTableFooterView.class;
 }
 

@@ -19,13 +19,13 @@
 
 @implementation TableSectionViewModel
 
-- (CGFloat)headerHeightForWidth:(CGFloat)width {
+- (CGFloat)tableHeaderHeightForWidth:(CGFloat)width {
     NSNumber *height;
     @synchronized (_headerWidthHeights) {
         height = _headerWidthHeights[@(width)];
         if (!height) {
             CGFloat contentWidth = width;
-            CGFloat headerHeight = [self.headerClass heightForWidth:&contentWidth viewModel:self];
+            CGFloat headerHeight = [self.tableHeaderClass heightForWidth:&contentWidth viewModel:self];
             height = @(headerHeight > 0.0f ? headerHeight : 0.1f);
             _headerWidthHeights[@(width)] = height;
         }
@@ -34,13 +34,13 @@
     return height.doubleValue;
 }
 
-- (CGFloat)footerHeightForWidth:(CGFloat)width {
+- (CGFloat)tableFooterHeightForWidth:(CGFloat)width {
     NSNumber *height;
     @synchronized (_footerWidthHeights) {
         height = _footerWidthHeights[@(width)];
         if (!height) {
             CGFloat contentWidth = width;
-            CGFloat footerHeight = [self.footerClass heightForWidth:&contentWidth viewModel:self];
+            CGFloat footerHeight = [self.tableFooterClass heightForWidth:&contentWidth viewModel:self];
             height = @(footerHeight > 0.0f ? footerHeight : 0.1f);
             _footerWidthHeights[@(width)] = height;
         }

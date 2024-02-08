@@ -9,15 +9,15 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class TableCellViewModel;
+@class CellViewModel;
 
 @interface TableViewModelCell : UITableViewCell
 
-@property (weak, nonatomic) TableCellViewModel *viewModel;
+@property (weak, nonatomic) CellViewModel *viewModel;
 
 #pragma mark - Subclass If Need
 
-+ (CGFloat)cellHeightForWidth:(CGFloat *)width viewModel:(TableCellViewModel *)viewModel;
++ (CGFloat)cellHeightForWidth:(CGFloat *)width viewModel:(CellViewModel *)viewModel;
 
 @end
 

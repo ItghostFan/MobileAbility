@@ -13,11 +13,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class TableCellViewModel;
+@class CellViewModel;
 
 @interface TableViewModel : BaseViewModel
 
-@property (strong, nonatomic, readonly) BaseViewModels<__kindof TableSectionViewModel<__kindof TableCellViewModel *> *> *sectionViewModels;
+@property (strong, nonatomic, readonly) BaseViewModels<__kindof TableSectionViewModel<__kindof CellViewModel *> *> *sectionViewModels;
 
 @property (weak, nonatomic) UITableView *tableView;
 

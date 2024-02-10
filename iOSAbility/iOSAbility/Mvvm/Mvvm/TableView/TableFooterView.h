@@ -9,13 +9,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class TableSectionViewModel;
+@class SectionViewModel;
 
 @interface TableFooterView : UITableViewHeaderFooterView
 
-@property (strong, nonatomic) TableSectionViewModel *viewModel;
+@property (strong, nonatomic) SectionViewModel *viewModel;
 
-+ (CGFloat)heightForWidth:(CGFloat *)width viewModel:(TableSectionViewModel *)viewModel;
++ (CGFloat)heightForWidth:(CGFloat *)width viewModel:(SectionViewModel *)viewModel;
 
 @end
 

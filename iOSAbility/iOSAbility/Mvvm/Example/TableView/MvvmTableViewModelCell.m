@@ -42,7 +42,7 @@
 
 #pragma mark - Super
 
-+ (CGFloat)cellHeightForWidth:(CGFloat *)width viewModel:(MvvmTableCellViewModel *)viewModel {
++ (CGFloat)heightForWidth:(CGFloat *)width viewModel:(MvvmTableCellViewModel *)viewModel {
     return 20.0f;
 }
 

@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - Subclass If Need
 
-+ (CGFloat)cellHeightForWidth:(CGFloat *)width viewModel:(CellViewModel *)viewModel;
++ (CGFloat)heightForWidth:(CGFloat *)width viewModel:(CellViewModel *)viewModel;
 
 @end
 

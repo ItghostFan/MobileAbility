@@ -8,11 +8,11 @@
 #import "TableFooterView.h"
 
 
-#import "TableSectionViewModel.h"
+#import "SectionViewModel+TableView.h"
 
 @implementation TableFooterView
 
-+ (CGFloat)heightForWidth:(CGFloat *)width viewModel:(TableSectionViewModel *)viewModel {
++ (CGFloat)heightForWidth:(CGFloat *)width viewModel:(SectionViewModel *)viewModel {
     return 0.001f;
 }
 

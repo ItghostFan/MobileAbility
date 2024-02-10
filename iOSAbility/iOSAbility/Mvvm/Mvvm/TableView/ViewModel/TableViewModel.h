@@ -9,7 +9,7 @@
 
 #import "BaseViewModel.h"
 
-#import "TableSectionViewModel.h"
+#import "SectionViewModel+TableView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TableViewModel : BaseViewModel
 
-@property (strong, nonatomic, readonly) BaseViewModels<__kindof TableSectionViewModel<__kindof CellViewModel *> *> *sectionViewModels;
+@property (strong, nonatomic, readonly) BaseViewModels<__kindof SectionViewModel<__kindof CellViewModel *> *> *sectionViewModels;
 
 @property (weak, nonatomic) UITableView *tableView;
 

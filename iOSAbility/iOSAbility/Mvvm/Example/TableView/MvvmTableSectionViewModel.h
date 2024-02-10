@@ -5,11 +5,11 @@
 //  Created by ItghostFan on 2024/2/6.
 //
 
-#import "TableSectionViewModel.h"
+#import "SectionViewModel+TableView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MvvmTableSectionViewModel : TableSectionViewModel
+@interface MvvmTableSectionViewModel : SectionViewModel
 
 @end
 

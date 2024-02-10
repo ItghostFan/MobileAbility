@@ -50,7 +50,7 @@
     [_registeredHeaderFooterIdentifiers removeAllObjects];
     _tableView = tableView;
     
-    for (TableSectionViewModel *sectionViewModel in _sectionViewModels.viewModels) {
+    for (SectionViewModel *sectionViewModel in _sectionViewModels.viewModels) {
         [self registerHeaderFooterClass:sectionViewModel.tableHeaderClass];
         [self registerHeaderFooterClass:sectionViewModel.tableFooterClass];
         for (CellViewModel *cellViewModel in sectionViewModel.viewModels) {
@@ -195,7 +195,7 @@
 /// mark - Header
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    TableSectionViewModel *sectionViewModel = self.sectionViewModels[section];
+    SectionViewModel *sectionViewModel = self.sectionViewModels[section];
     if (sectionViewModel.tableHeaderClass) {
         return [tableView dequeueReusableHeaderFooterViewWithIdentifier:NSStringFromClass(sectionViewModel.tableHeaderClass)];
     }
@@ -203,19 +203,19 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    TableSectionViewModel *sectionViewModel = self.sectionViewModels[section];
+    SectionViewModel *sectionViewModel = self.sectionViewModels[section];
     return [sectionViewModel tableHeaderHeightForWidth:CGRectGetWidth(tableView.bounds)];
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section {
-    TableSectionViewModel *sectionViewModel = self.sectionViewModels[section];
+    SectionViewModel *sectionViewModel = self.sectionViewModels[section];
     ((TableHeaderView *)view).viewModel = sectionViewModel;
 }
 
 /// mark - Footer
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
-    TableSectionViewModel *sectionViewModel = self.sectionViewModels[section];
+    SectionViewModel *sectionViewModel = self.sectionViewModels[section];
     if (sectionViewModel.tableFooterClass) {
         return [tableView dequeueReusableHeaderFooterViewWithIdentifier:NSStringFromClass(sectionViewModel.tableFooterClass)];
     }
@@ -223,12 +223,12 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    TableSectionViewModel *sectionViewModel = self.sectionViewModels[section];
+    SectionViewModel *sectionViewModel = self.sectionViewModels[section];
     return [sectionViewModel tableFooterHeightForWidth:CGRectGetWidth(tableView.bounds)];
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayFooterView:(UIView *)view forSection:(NSInteger)section {
-    TableSectionViewModel *sectionViewModel = self.sectionViewModels[section];
+    SectionViewModel *sectionViewModel = self.sectionViewModels[section];
     ((TableFooterView *)view).viewModel = sectionViewModel;
 }
 

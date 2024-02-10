@@ -1,15 +1,15 @@
 //
-//  TableSectionViewModel.h
+//  ITableSectionViewModel.h
 //  iOSAbility
 //
-//  Created by ItghostFan on 2024/2/4.
+//  Created by ItghostFan on 2024/2/10.
 //
 
-#import "BaseViewModels.h"
+#import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TableSectionViewModel<__covariant ObjectType> : BaseViewModels<ObjectType>
+@protocol ITableSectionViewModel <NSObject>
 
 @property (strong, nonatomic, readonly) Class tableHeaderClass;
 @property (strong, nonatomic, readonly) Class tableFooterClass;

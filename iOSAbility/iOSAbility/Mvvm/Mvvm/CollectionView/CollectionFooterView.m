@@ -9,4 +9,9 @@
 
 @implementation CollectionFooterView
 
++ (CGSize)footerSizeForSize:(CGSize *)size viewModel:(SectionViewModel *)viewModel {
+    NSAssert(NO, @"%@ %s Should Implement By Subclass!", NSStringFromClass(self.class), __FUNCTION__);
+    return CGSizeZero;
+}
+
 @end

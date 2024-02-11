@@ -47,8 +47,8 @@
 		78FE68AA2B7124F10012D460 /* TableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78FE68892B7124F10012D460 /* TableHeaderView.m */; };
 		78FE68AB2B7124F10012D460 /* TableFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78FE688E2B7124F10012D460 /* TableFooterView.m */; };
 		78FE68AC2B7124F10012D460 /* BaseViewModels.m in Sources */ = {isa = PBXBuildFile; fileRef = 78FE688F2B7124F10012D460 /* BaseViewModels.m */; };
-		78FE68AD2B7124F10012D460 /* CollectionSectionViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 78FE68932B7124F10012D460 /* CollectionSectionViewModel.m */; };
-		78FE68AE2B7124F10012D460 /* CollectionCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 78FE68972B7124F10012D460 /* CollectionCellViewModel.m */; };
+		78FE68AD2B7124F10012D460 /* SectionViewModel+CollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78FE68932B7124F10012D460 /* SectionViewModel+CollectionView.m */; };
+		78FE68AE2B7124F10012D460 /* CellViewModel+CollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78FE68972B7124F10012D460 /* CellViewModel+CollectionView.m */; };
 		78FE68AF2B7124F10012D460 /* CollectionViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 78FE68982B7124F10012D460 /* CollectionViewModel.m */; };
 		78FE68B02B7124F10012D460 /* CollectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78FE689A2B7124F10012D460 /* CollectionController.m */; };
 		78FE68B12B7124F10012D460 /* CollectionFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78FE689B2B7124F10012D460 /* CollectionFooterView.m */; };
@@ -72,6 +72,7 @@
 		7839CD9A2B779169006EA28A /* SectionViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SectionViewModel.h; sourceTree = "<group>"; };
 		7839CD9B2B779169006EA28A /* SectionViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SectionViewModel.m; sourceTree = "<group>"; };
 		7839CD9D2B77946F006EA28A /* ITableSectionViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ITableSectionViewModel.h; sourceTree = "<group>"; };
+		7839CD9E2B79066A006EA28A /* ICollectionSectionViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICollectionSectionViewModel.h; sourceTree = "<group>"; };
 		78576BB52B726A230010259E /* MvvmTableCellViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MvvmTableCellViewModel.h; sourceTree = "<group>"; };
 		78576BB62B726A230010259E /* MvvmTableCellViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MvvmTableCellViewModel.m; sourceTree = "<group>"; };
 		78576BB82B726A450010259E /* MvvmTableViewModelCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MvvmTableViewModelCell.h; sourceTree = "<group>"; };
@@ -142,11 +143,11 @@
 		78FE688E2B7124F10012D460 /* TableFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableFooterView.m; sourceTree = "<group>"; };
 		78FE688F2B7124F10012D460 /* BaseViewModels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewModels.m; sourceTree = "<group>"; };
 		78FE68902B7124F10012D460 /* CellViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellViewModel.h; sourceTree = "<group>"; };
-		78FE68932B7124F10012D460 /* CollectionSectionViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionSectionViewModel.m; sourceTree = "<group>"; };
+		78FE68932B7124F10012D460 /* SectionViewModel+CollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SectionViewModel+CollectionView.m"; sourceTree = "<group>"; };
 		78FE68942B7124F10012D460 /* CollectionViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewModel.h; sourceTree = "<group>"; };
-		78FE68952B7124F10012D460 /* CollectionCellViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionCellViewModel.h; sourceTree = "<group>"; };
-		78FE68962B7124F10012D460 /* CollectionSectionViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionSectionViewModel.h; sourceTree = "<group>"; };
-		78FE68972B7124F10012D460 /* CollectionCellViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionCellViewModel.m; sourceTree = "<group>"; };
+		78FE68952B7124F10012D460 /* CellViewModel+CollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CellViewModel+CollectionView.h"; sourceTree = "<group>"; };
+		78FE68962B7124F10012D460 /* SectionViewModel+CollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SectionViewModel+CollectionView.h"; sourceTree = "<group>"; };
+		78FE68972B7124F10012D460 /* CellViewModel+CollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CellViewModel+CollectionView.m"; sourceTree = "<group>"; };
 		78FE68982B7124F10012D460 /* CollectionViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewModel.m; sourceTree = "<group>"; };
 		78FE68992B7124F10012D460 /* CollectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionHeaderView.h; sourceTree = "<group>"; };
 		78FE689A2B7124F10012D460 /* CollectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionController.m; sourceTree = "<group>"; };
@@ -398,10 +399,11 @@
 			isa = PBXGroup;
 			children = (
 				7839CD992B73D0D0006EA28A /* ICollectionCellViewModel.h */,
-				78FE68952B7124F10012D460 /* CollectionCellViewModel.h */,
-				78FE68972B7124F10012D460 /* CollectionCellViewModel.m */,
-				78FE68962B7124F10012D460 /* CollectionSectionViewModel.h */,
-				78FE68932B7124F10012D460 /* CollectionSectionViewModel.m */,
+				78FE68952B7124F10012D460 /* CellViewModel+CollectionView.h */,
+				78FE68972B7124F10012D460 /* CellViewModel+CollectionView.m */,
+				7839CD9E2B79066A006EA28A /* ICollectionSectionViewModel.h */,
+				78FE68962B7124F10012D460 /* SectionViewModel+CollectionView.h */,
+				78FE68932B7124F10012D460 /* SectionViewModel+CollectionView.m */,
 				78FE68942B7124F10012D460 /* CollectionViewModel.h */,
 				78FE68982B7124F10012D460 /* CollectionViewModel.m */,
 			);
@@ -507,7 +509,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				789731A82B6F6115005C35CB /* MvvmController.m in Sources */,
-				78FE68AD2B7124F10012D460 /* CollectionSectionViewModel.m in Sources */,
+				78FE68AD2B7124F10012D460 /* SectionViewModel+CollectionView.m in Sources */,
 				78576BC62B7272A00010259E /* MvvmTableHeaderView.m in Sources */,
 				78DD9D692B39C68800C1943F /* ScrollUpHideNavigationBarViewModel.m in Sources */,
 				78FE68AF2B7124F10012D460 /* CollectionViewModel.m in Sources */,
@@ -548,7 +550,7 @@
 				78FE68A92B7124F10012D460 /* TableViewModelCell.m in Sources */,
 				78DD9D4F2B39C16900C1943F /* SceneDelegate.m in Sources */,
 				7834C3862B66B6190004C82E /* RichTextController.m in Sources */,
-				78FE68AE2B7124F10012D460 /* CollectionCellViewModel.m in Sources */,
+				78FE68AE2B7124F10012D460 /* CellViewModel+CollectionView.m in Sources */,
 				78DD9D812B3B1D6400C1943F /* ScrollUpHideTableHeadController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,11 +9,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class CollectionSectionViewModel;
+@class SectionViewModel;
 
 @interface CollectionHeaderView : UICollectionReusableView
 
-@property (weak, nonatomic) CollectionSectionViewModel *viewModel;
+@property (weak, nonatomic) SectionViewModel *viewModel;
+
++ (CGSize)headerSizeForSize:(CGSize *)size viewModel:(SectionViewModel *)viewModel;
 
 @end
 

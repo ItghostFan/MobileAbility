@@ -10,7 +10,7 @@
 #import <ReactiveObjC/ReactiveObjC.h>
 #import <ReactiveObjC/NSObject+RACKVOWrapper.h>
 
-#import "CellViewModel.h"
+#import "CellViewModel+CollectionView.h"
 #import "CollectionViewModelCell.h"
 #import "CollectionHeaderView.h"
 #import "CollectionFooterView.h"
@@ -84,7 +84,7 @@ UICollectionViewDelegate>
     [_registeredFooterIdentifiers removeAllObjects];
     _collectionView = collectionView;
     
-    for (CollectionSectionViewModel *sectionViewModel in _sectionViewModels.viewModels) {
+    for (SectionViewModel *sectionViewModel in _sectionViewModels.viewModels) {
         [self registerHeaderClass:sectionViewModel.collectionHeaderClass];
         [self registerFooterClass:sectionViewModel.collectionFooterClass];
         for (CellViewModel *cellViewModel in sectionViewModel.viewModels) {
@@ -191,12 +191,12 @@ UICollectionViewDelegate>
 }
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
-    CollectionSectionViewModel *sectionViewModel = self.sectionViewModels[section];
+    SectionViewModel *sectionViewModel = self.sectionViewModels[section];
     return sectionViewModel.collectionMinimumInteritemSpacing;
 }
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
-    CollectionSectionViewModel *sectionViewModel = self.sectionViewModels[section];
+    SectionViewModel *sectionViewModel = self.sectionViewModels[section];
     return sectionViewModel.collectionMinimumLineSpacing;
 }
 
@@ -225,11 +225,11 @@ UICollectionViewDelegate>
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
     if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
-        CollectionSectionViewModel *sectionViewModel = self.sectionViewModels[indexPath.section];
+        SectionViewModel *sectionViewModel = self.sectionViewModels[indexPath.section];
         return [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:NSStringFromClass(sectionViewModel.collectionHeaderClass) forIndexPath:indexPath];
     }
     if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
-        CollectionSectionViewModel *sectionViewModel = self.sectionViewModels[indexPath.section];
+        SectionViewModel *sectionViewModel = self.sectionViewModels[indexPath.section];
         return [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:NSStringFromClass(sectionViewModel.collectionFooterClass) forIndexPath:indexPath];
     }
     return nil;
@@ -244,12 +244,12 @@ UICollectionViewDelegate>
 
 - (void)collectionView:(UICollectionView *)collectionView willDisplaySupplementaryView:(UICollectionReusableView *)view forElementKind:(NSString *)elementKind atIndexPath:(NSIndexPath *)indexPath {
     if ([elementKind isEqualToString:UICollectionElementKindSectionHeader]) {
-        CollectionSectionViewModel *sectionViewModel = self.sectionViewModels[indexPath.section];
+        SectionViewModel *sectionViewModel = self.sectionViewModels[indexPath.section];
         ((CollectionHeaderView *)view).viewModel = sectionViewModel;
         return;
     }
     if ([elementKind isEqualToString:UICollectionElementKindSectionHeader]) {
-        CollectionSectionViewModel *sectionViewModel = self.sectionViewModels[indexPath.section];
+        SectionViewModel *sectionViewModel = self.sectionViewModels[indexPath.section];
         ((CollectionFooterView *)view).viewModel = sectionViewModel;
     }
 }

@@ -41,6 +41,16 @@
 
 #pragma mark - ITableSectionViewModel
 
+- (Class)tableHeaderClass {
+    NSAssert(NO, @"%@ %s Should Implement By Subclass!", NSStringFromClass(self.class), __FUNCTION__);
+    return TableHeaderView.class;
+}
+
+- (Class)tableFooterClass {
+    NSAssert(NO, @"%@ %s Should Implement By Subclass!", NSStringFromClass(self.class), __FUNCTION__);
+    return TableFooterView.class;
+}
+
 - (CGFloat)tableHeaderHeightForWidth:(CGFloat)width {
     NSNumber *height;
     @synchronized (self.headerWidthHeights) {

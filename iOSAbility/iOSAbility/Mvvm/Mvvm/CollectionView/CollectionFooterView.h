@@ -9,11 +9,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class CollectionSectionViewModel;
+@class SectionViewModel;
 
 @interface CollectionFooterView : UICollectionReusableView
 
-@property (weak, nonatomic) CollectionSectionViewModel *viewModel;
+@property (weak, nonatomic) SectionViewModel *viewModel;
+
++ (CGSize)footerSizeForSize:(CGSize *)size viewModel:(SectionViewModel *)viewModel;
 
 @end
 

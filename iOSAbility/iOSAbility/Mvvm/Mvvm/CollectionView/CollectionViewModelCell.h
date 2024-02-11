@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (weak, nonatomic) CellViewModel *viewModel;
 
++ (CGSize)cellSizeForSize:(CGSize *)size viewModel:(CellViewModel *)viewModel;
+
 @end
 
 NS_ASSUME_NONNULL_END

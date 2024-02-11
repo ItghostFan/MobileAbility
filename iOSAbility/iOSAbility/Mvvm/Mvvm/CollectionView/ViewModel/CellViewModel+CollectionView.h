@@ -1,5 +1,5 @@
 //
-//  CollectionCellViewModel.h
+//  CellViewModel+CollectionView.h
 //  iOSAbility
 //
 //  Created by ItghostFan on 2024/2/4.
@@ -7,11 +7,11 @@
 
 #import "ICollectionCellViewModel.h"
 
-#import "BaseViewModel.h"
+#import "CellViewModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CollectionCellViewModel : BaseViewModel <ICollectionCellViewModel>
+@interface CellViewModel (CollectionView) <ICollectionCellViewModel>
 
 @end
 

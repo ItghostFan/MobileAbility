@@ -7,7 +7,7 @@
 
 #import "BaseViewModel.h"
 
-#import "ICollectionCellViewModel.h"
+//#import "ICollectionCellViewModel.h"
 //#import "ITableCellViewModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@interface CellViewModel : BaseViewModel <ICollectionCellViewModel>
+@interface CellViewModel : BaseViewModel
 
 @property (weak, nonatomic, nullable) id<ICellViewModelDelegate> delegate;
 @property (strong, nonatomic, readonly, nullable) Class cellClass;

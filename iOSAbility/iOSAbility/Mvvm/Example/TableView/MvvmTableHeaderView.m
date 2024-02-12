@@ -7,7 +7,7 @@
 
 #import "MvvmTableHeaderView.h"
 
-#import "MvvmTableSectionViewModel.h"
+#import "MvvmSectionViewModel.h"
 
 @implementation MvvmTableHeaderView
 
@@ -25,7 +25,7 @@
     return self;
 }
 
-+ (CGFloat)heightForWidth:(CGFloat *)width viewModel:(MvvmTableSectionViewModel *)viewModel {
++ (CGFloat)heightForWidth:(CGFloat *)width viewModel:(MvvmSectionViewModel *)viewModel {
     return 40.0f;
 }
 

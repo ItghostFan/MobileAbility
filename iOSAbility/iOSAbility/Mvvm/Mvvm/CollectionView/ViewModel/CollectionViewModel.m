@@ -239,18 +239,20 @@ UICollectionViewDelegate>
 
 - (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
     CellViewModel *cellViewModel = self.sectionViewModels[indexPath.section][indexPath.item];
+    cellViewModel.collectionIndexPath = indexPath;
     ((CollectionViewModelCell *)cell).viewModel = cellViewModel;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView willDisplaySupplementaryView:(UICollectionReusableView *)view forElementKind:(NSString *)elementKind atIndexPath:(NSIndexPath *)indexPath {
+    SectionViewModel *sectionViewModel = self.sectionViewModels[indexPath.section];
+    sectionViewModel.collectionIndexPath = indexPath;
     if ([elementKind isEqualToString:UICollectionElementKindSectionHeader]) {
-        SectionViewModel *sectionViewModel = self.sectionViewModels[indexPath.section];
         ((CollectionHeaderView *)view).viewModel = sectionViewModel;
         return;
     }
     if ([elementKind isEqualToString:UICollectionElementKindSectionHeader]) {
-        SectionViewModel *sectionViewModel = self.sectionViewModels[indexPath.section];
         ((CollectionFooterView *)view).viewModel = sectionViewModel;
+        return;
     }
 }
 

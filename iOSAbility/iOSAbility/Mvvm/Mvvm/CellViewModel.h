@@ -7,9 +7,6 @@
 
 #import "BaseViewModel.h"
 
-//#import "ICollectionCellViewModel.h"
-//#import "ITableCellViewModel.h"
-
 NS_ASSUME_NONNULL_BEGIN
 
 @class CellViewModel;
@@ -25,8 +22,6 @@ NS_ASSUME_NONNULL_BEGIN
 @interface CellViewModel : BaseViewModel
 
 @property (weak, nonatomic, nullable) id<ICellViewModelDelegate> delegate;
-@property (strong, nonatomic, readonly, nullable) Class cellClass;
-
 @property (assign, nonatomic) BOOL deselectAfterDidSelect;       // Default is YES.
 
 @end

@@ -9,7 +9,7 @@
 
 #import <Masonry/Masonry.h>
 
-#import "MvvmTableCellViewModel.h"
+#import "MvvmCellViewModel.h"
 
 @interface MvvmTableViewModelCell ()
 @property (weak, nonatomic) UILabel *cellLabel;
@@ -17,9 +17,9 @@
 
 @implementation MvvmTableViewModelCell
 
-- (void)setViewModel:(MvvmTableCellViewModel *)viewModel {
+- (void)setViewModel:(MvvmCellViewModel *)viewModel {
     [super setViewModel:viewModel];
-    self.cellLabel.text = [NSString stringWithFormat:@"%lu-%lu", viewModel.section, viewModel.row];
+    self.cellLabel.text = [NSString stringWithFormat:@"%lu-%lu", viewModel.tableIndexPath.section, viewModel.tableIndexPath.row];
 }
 
 #pragma mark - Getter
@@ -42,7 +42,7 @@
 
 #pragma mark - Super
 
-+ (CGFloat)heightForWidth:(CGFloat *)width viewModel:(MvvmTableCellViewModel *)viewModel {
++ (CGFloat)heightForWidth:(CGFloat *)width viewModel:(MvvmCellViewModel *)viewModel {
     return 20.0f;
 }
 

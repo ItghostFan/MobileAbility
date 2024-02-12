@@ -41,6 +41,14 @@
 
 #pragma mark - ITableSectionViewModel
 
+- (NSInteger)tableSection {
+    return [objc_getAssociatedObject(self, @selector(tableSection)) integerValue];
+}
+
+- (void)setTableSection:(NSInteger)tableSection {
+    objc_setAssociatedObject(self, @selector(tableSection), @(tableSection), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
 - (Class)tableHeaderClass {
     NSAssert(NO, @"%@ %s Should Implement By Subclass!", NSStringFromClass(self.class), __FUNCTION__);
     return TableHeaderView.class;

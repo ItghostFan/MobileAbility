@@ -7,7 +7,7 @@
 
 #import "MvvmTableFooterView.h"
 
-#import "MvvmTableSectionViewModel.h"
+#import "MvvmSectionViewModel.h"
 
 @implementation MvvmTableFooterView
 
@@ -25,7 +25,7 @@
     return self;
 }
 
-+ (CGFloat)heightForWidth:(CGFloat *)width viewModel:(MvvmTableSectionViewModel *)viewModel {
++ (CGFloat)heightForWidth:(CGFloat *)width viewModel:(MvvmSectionViewModel *)viewModel {
     return 5.0f;
 }
 

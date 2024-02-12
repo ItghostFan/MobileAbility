@@ -35,6 +35,14 @@
 
 #pragma mark - ICollectionSectionViewModel
 
+- (void)setCollectionIndexPath:(NSIndexPath *)collectionIndexPath {
+    objc_setAssociatedObject(self, @selector(collectionIndexPath), collectionIndexPath, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (NSIndexPath *)collectionIndexPath {
+    return objc_getAssociatedObject(self, @selector(collectionIndexPath));
+}
+
 - (CGSize)collectionHeaderSize {
     NSValue *collectionHeaderSize = objc_getAssociatedObject(self, @selector(collectionHeaderSize));
     return [collectionHeaderSize CGSizeValue];

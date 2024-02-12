@@ -11,6 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol ICollectionCellViewModel <NSObject>
 
+@property (weak, nonatomic, nullable) NSIndexPath *collectionIndexPath;
 @property (assign, nonatomic, readonly) CGSize collectionCellSize;               // 最后一次collectionCellSizeForSize:的size。
 @property (strong, nonatomic, readonly, nullable) Class collectionCellClass;
 

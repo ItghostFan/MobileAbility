@@ -179,6 +179,7 @@
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     CellViewModel *cellViewModel = self.sectionViewModels[indexPath.section][indexPath.row];
+    cellViewModel.tableIndexPath = indexPath;
     ((TableViewModelCell *)cell).viewModel = cellViewModel;
 }
 

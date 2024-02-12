@@ -32,6 +32,14 @@
 
 #pragma mark - ICollectionCellViewModel
 
+- (void)setCollectionIndexPath:(NSIndexPath *)collectionIndexPath {
+    objc_setAssociatedObject(self, @selector(collectionIndexPath), collectionIndexPath, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (NSIndexPath *)collectionIndexPath {
+    return objc_getAssociatedObject(self, @selector(collectionIndexPath));
+}
+
 - (CGSize)collectionCellSize {
     NSValue *collectionCellSize = objc_getAssociatedObject(self, @selector(collectionCellSize));
     return [collectionCellSize CGSizeValue];

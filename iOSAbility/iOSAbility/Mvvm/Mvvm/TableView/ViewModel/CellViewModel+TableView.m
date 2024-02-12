@@ -29,6 +29,14 @@
 
 #pragma mark - ITableCellViewModel
 
+- (void)setTableIndexPath:(NSIndexPath *)tableIndexPath {
+    objc_setAssociatedObject(self, @selector(tableIndexPath), tableIndexPath, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (NSIndexPath *)tableIndexPath {
+    return objc_getAssociatedObject(self, @selector(tableIndexPath));
+}
+
 - (CGSize)tableCellSize {
     NSValue *tableCellSize = objc_getAssociatedObject(self, @selector(tableCellSize));
     return [tableCellSize CGSizeValue];

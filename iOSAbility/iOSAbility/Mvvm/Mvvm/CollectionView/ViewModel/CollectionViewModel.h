@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CollectionViewModel : BaseViewModel
 
-@property (strong, nonatomic, readonly) BaseViewModels<__kindof SectionViewModel<__kindof CellViewModel *> *> *sectionViewModels;
+@property (strong, nonatomic) BaseViewModels<__kindof SectionViewModel<__kindof CellViewModel *> *> *sectionViewModels;
 
 @property (weak, nonatomic, nullable) UICollectionView *collectionView;
 

@@ -33,6 +33,15 @@
     return sizeHeaderSizes;
 }
 
+- (NSMutableDictionary<__kindof NSValue *, __kindof NSValue *> *)sizeFooterSizes {
+    NSMutableDictionary<__kindof NSValue *, __kindof NSValue *> *sizeFooterSizes = objc_getAssociatedObject(self, @selector(sizeFooterSizes));
+    if (sizeFooterSizes) {
+        sizeFooterSizes = NSMutableDictionary.new;
+        objc_setAssociatedObject(self, @selector(sizeFooterSizes), sizeFooterSizes, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    }
+    return sizeFooterSizes;
+}
+
 #pragma mark - ICollectionSectionViewModel
 
 - (void)setCollectionIndexPath:(NSIndexPath *)collectionIndexPath {
@@ -48,7 +57,7 @@
     return [collectionHeaderSize CGSizeValue];
 }
 
-- (void)setCollectionHeaderCellSize:(CGSize)collectionHeaderSize {
+- (void)setCollectionHeaderSize:(CGSize)collectionHeaderSize {
     objc_setAssociatedObject(self, @selector(collectionHeaderSize), [NSValue valueWithCGSize:collectionHeaderSize], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
@@ -57,7 +66,7 @@
     return [collectionFooterSize CGSizeValue];
 }
 
-- (void)setCollectionFooterCellSize:(CGSize)collectionFooterSize {
+- (void)setCollectionFooterSize:(CGSize)collectionFooterSize {
     objc_setAssociatedObject(self, @selector(collectionFooterSize), [NSValue valueWithCGSize:collectionFooterSize], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 

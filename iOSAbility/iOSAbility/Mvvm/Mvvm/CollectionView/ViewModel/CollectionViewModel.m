@@ -127,7 +127,7 @@ UICollectionViewDelegate>
             for (BaseViewModels *sectionViewModel in news) {
                 [self addKvoSectionViewModel:sectionViewModel];
             }
-            [self.collectionView insertSections:indexes];
+//            [self.collectionView insertSections:indexes];
             break;
         }
         case NSKeyValueChangeRemoval: {
@@ -200,13 +200,15 @@ UICollectionViewDelegate>
     return sectionViewModel.collectionMinimumLineSpacing;
 }
 
-//- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
-//    
-//}
-//
-//- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section {
-//    
-//}
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
+    SectionViewModel *sectionViewModel = self.sectionViewModels[section];
+    return [sectionViewModel collectionHeaderSizeForSize:collectionView.frame.size];
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section {
+    SectionViewModel *sectionViewModel = self.sectionViewModels[section];
+    return [sectionViewModel collectionFooterSizeForSize:collectionView.frame.size];
+}
 
 #pragma mark - UICollectionViewDataSource
 
@@ -228,7 +230,7 @@ UICollectionViewDelegate>
         SectionViewModel *sectionViewModel = self.sectionViewModels[indexPath.section];
         return [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:NSStringFromClass(sectionViewModel.collectionHeaderClass) forIndexPath:indexPath];
     }
-    if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
+    if ([kind isEqualToString:UICollectionElementKindSectionFooter]) {
         SectionViewModel *sectionViewModel = self.sectionViewModels[indexPath.section];
         return [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:NSStringFromClass(sectionViewModel.collectionFooterClass) forIndexPath:indexPath];
     }

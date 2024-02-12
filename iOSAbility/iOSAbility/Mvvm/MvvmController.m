@@ -79,6 +79,7 @@
     CollectionViewModel *viewModel = CollectionViewModel.new;
     viewModel.sectionViewModels = _sectionViewModels;
     controller.viewModel = viewModel;
+    controller.view.hidden = YES;
     [self addChildViewController:controller];
     [self.view addSubview:controller.view];
     [controller.view mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -100,9 +101,16 @@
 #pragma mark - Actions
 
 - (void)onAdd:(id)sender {
-    NSInteger row = self.sectionViewModels[0].viewModels.count;
-    MvvmCellViewModel *viewModel = MvvmCellViewModel.new;
-    [self.sectionViewModels[0] addViewModel:viewModel];
+//    NSInteger row = self.sectionViewModels[0].viewModels.count;
+//    MvvmCellViewModel *viewModel = MvvmCellViewModel.new;
+//    [self.sectionViewModels[0] addViewModel:viewModel];
+    {
+        MvvmSectionViewModel *sectionViewModel = MvvmSectionViewModel.new;
+        MvvmCellViewModel *cellViewModel = MvvmCellViewModel.new;
+        [sectionViewModel addViewModel:cellViewModel];
+//        [_sectionViewModels addViewModel:sectionViewModel];
+        [_sectionViewModels insertViewModel:sectionViewModel atIndex:1];
+    }
 }
 
 - (void)onDelete:(id)sender {
@@ -111,8 +119,12 @@
 //        return;
 //    }
 //    [self.viewModel.sectionViewModels[0] removeViewModel:viewModel];
-    NSMutableIndexSet *indexes = [NSMutableIndexSet indexSetWithIndexesInRange:NSMakeRange(0, self.sectionViewModels[0].viewModels.count)];
-    [self.sectionViewModels[0] removeViewModelsAtIndexes:indexes];
+    
+//    NSMutableIndexSet *indexes = [NSMutableIndexSet indexSetWithIndexesInRange:NSMakeRange(0, self.sectionViewModels[0].viewModels.count)];
+//    [self.sectionViewModels[0] removeViewModelsAtIndexes:indexes];
+    
+    NSMutableIndexSet *indexes = [NSMutableIndexSet indexSetWithIndexesInRange:NSMakeRange(0, self.sectionViewModels.viewModels.count)];
+    [self.sectionViewModels removeViewModelsAtIndexes:indexes];
 }
 
 - (void)onSelect:(id)sender {

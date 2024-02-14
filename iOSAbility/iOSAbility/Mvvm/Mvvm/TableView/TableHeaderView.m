@@ -12,7 +12,7 @@
 @implementation TableHeaderView
 
 + (CGFloat)heightForWidth:(CGFloat *)width viewModel:(SectionViewModel *)viewModel {
-    return 0.001f;
+    return 0.0f;
 }
 
 @end

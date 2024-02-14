@@ -13,9 +13,15 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@protocol ITableViewModelDelegate <UITableViewDelegate, IBaseViewModelDelegate>
+
+@end
+
 @class CellViewModel;
 
 @interface TableViewModel : BaseViewModel
+
+@property (weak, nonatomic, nullable) id<ITableViewModelDelegate> delegate;
 
 @property (strong, nonatomic) BaseViewModels<__kindof SectionViewModel<__kindof CellViewModel *> *> *sectionViewModels;
 

@@ -65,6 +65,14 @@
     _tableView.dataSource = self;
 }
 
+- (void)setDelegate:(id<ITableViewModelDelegate>)delegate {
+    [super setDelegate:delegate];
+}
+
+- (id<ITableViewModelDelegate>)delegate {
+    return (id<ITableViewModelDelegate>)super.delegate;
+}
+
 #pragma mark - KVO Handler
 
 - (void)addKvoSectionViewModel:(BaseViewModels<__kindof CellViewModel *> *)viewModel {
@@ -251,6 +259,14 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.sectionViewModels[section].viewModels.count;
+}
+
+#pragma mark - UIScrollViewDelegate
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    if ([self.delegate respondsToSelector:@selector(scrollViewDidScroll:)]) {
+        [self.delegate scrollViewDidScroll:scrollView];
+    }
 }
 
 @end

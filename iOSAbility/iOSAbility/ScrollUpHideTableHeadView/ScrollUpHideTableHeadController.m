@@ -13,7 +13,7 @@
 #import "ScrollUpHideTableHeadViewModel.h"
 #import "RowCell.h"
 
-@interface ScrollUpHideTableHeadController () <UIScrollViewDelegate>
+@interface ScrollUpHideTableHeadController () <ITableViewModelDelegate>
 
 @property (strong, nonatomic) TableViewModel *tableViewModel;
 @property (weak, nonatomic) UITableView *tableView;
@@ -27,10 +27,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tableViewModel = TableViewModel.new;
+    self.tableViewModel.delegate = self;
     SectionViewModel *sectionViewModel = SectionViewModel.new;
-    [sectionViewModel addViewModel:RowViewModel.new];
+    for (NSInteger index = 0; index < 100; ++index) {
+        [sectionViewModel addViewModel:RowViewModel.new];
+    }
     [self.tableViewModel.sectionViewModels addViewModel:sectionViewModel];
     self.tableViewModel.tableView = self.tableView;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+//    self.navigationController.navigationBarHidden = YES;
 }
 
 #pragma mark - Getter
@@ -42,18 +50,24 @@
         [self.view addSubview:_tableView];
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.edges.equalTo(self.view);
+            make.top.equalTo(self.view);
+            make.leading.trailing.bottom.equalTo(self.view);
         }];
         UIImageView *headView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"natura"]];
         _headView = headView;
         _headView.contentMode = UIViewContentModeScaleAspectFill;
-        UIView *tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(UIScreen.mainScreen.bounds), 300.0f)];
+        UIView *tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, -500.0, CGRectGetWidth(UIScreen.mainScreen.bounds), 300.0f)];
         [tableHeaderView addSubview:_headView];
         _tableView.tableHeaderView = tableHeaderView;
+//        tableHeaderView.backgroundColor = UIColor.redColor;
         [_headView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.view);                            // MARK: 注意这里这样做，才会放大缩小图片效果
             make.leading.trailing.bottom.equalTo(tableHeaderView);
         }];
+        _tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        if (@available(iOS 15.0, *)) {
+            _tableView.sectionHeaderTopPadding = 0.0f;
+        }
         _minTableHeaderViewHeight = CGRectGetHeight(tableHeaderView.frame);
     }
     return _tableView;
@@ -67,14 +81,9 @@
     yOffset = MIN(headerViewHeight, yOffset);
     if (yOffset >= 0.0f) {
         self.headView.alpha = 1.0f - (yOffset / headerViewHeight);
+        ((UITableView *)scrollView).tableHeaderView.clipsToBounds = YES;
     } else {
-//        CGFloat height = -(yOffset * 2) + headerViewHeight;
-////        CGRect frame = CGRectInset(self.tableView.tableHeaderView.frame, 0.0f, yOffset);
-////        if (CGRectGetHeight(frame) > _minTableHeaderViewHeight) {
-////            self.tableView.tableHeaderView.frame = frame;
-////        }
-//        CGFloat factor = height / headerViewHeight;
-//        self.headView.layer.transform = CATransform3DScale(CATransform3DIdentity, factor, factor, 1.0f);
+        ((UITableView *)scrollView).tableHeaderView.clipsToBounds = NO;
     }
 }
 

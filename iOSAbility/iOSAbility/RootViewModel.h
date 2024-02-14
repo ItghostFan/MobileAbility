@@ -7,13 +7,16 @@
 
 #import <Foundation/Foundation.h>
 
+#import "TableViewModel.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
+@protocol ICellViewModelDelegate;
 @class RowViewModel;
 
-@interface RootViewModel : NSObject
+@interface RootViewModel : TableViewModel
 
-@property (strong, nonatomic, readonly) NSArray<__kindof RowViewModel *> *viewModels;
+- (instancetype)initWithDelegate:(id<ICellViewModelDelegate>)delegate;
 
 @end
 

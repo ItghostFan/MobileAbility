@@ -7,6 +7,8 @@
 
 #import "RowViewModel.h"
 
+#import "RowCell.h"
+
 @interface RowViewModel ()
 @property (strong, nonatomic) NSString *content;
 @end
@@ -22,6 +24,12 @@
 
 - (void)pushToNavigationController:(UINavigationController *)navigationController {
     NSAssert(NO, @"%@ Subclass Should Implement %s", NSStringFromClass(self.class), __FUNCTION__);
+}
+
+#pragma mark - Subclass
+
+- (Class)tableCellClass {
+    return RowCell.class;
 }
 
 @end

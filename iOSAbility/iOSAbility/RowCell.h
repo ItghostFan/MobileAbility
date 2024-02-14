@@ -7,13 +7,13 @@
 
 #import <UIKit/UIKit.h>
 
+#import "TableViewModelCell.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
 @class RowViewModel;
 
-@interface RowCell : UITableViewCell
-
-@property (weak, nonatomic) RowViewModel *viewModel;
+@interface RowCell : TableViewModelCell
 
 @end
 

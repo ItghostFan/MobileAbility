@@ -9,15 +9,13 @@
 
 #import <Masonry/Masonry.h>
 
+#import "TableViewModel.h"
 #import "ScrollUpHideTableHeadViewModel.h"
 #import "RowCell.h"
 
-@interface ScrollUpHideTableHeadController () <
-UITableViewDataSource,
-UITableViewDelegate,
-UIScrollViewDelegate
->
+@interface ScrollUpHideTableHeadController () <UIScrollViewDelegate>
 
+@property (strong, nonatomic) TableViewModel *tableViewModel;
 @property (weak, nonatomic) UITableView *tableView;
 @property (assign, nonatomic) CGFloat minTableHeaderViewHeight;
 @property (weak, nonatomic) UIImageView *headView;
@@ -28,14 +26,11 @@ UIScrollViewDelegate
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.tableView.dataSource = self;
-    self.tableView.delegate = self;
-}
-
-- (void)setViewModel:(ScrollUpHideTableHeadViewModel *)viewModel {
-    _viewModel = viewModel;
-    [self.tableView reloadData];
+    self.tableViewModel = TableViewModel.new;
+    SectionViewModel *sectionViewModel = SectionViewModel.new;
+    [sectionViewModel addViewModel:RowViewModel.new];
+    [self.tableViewModel.sectionViewModels addViewModel:sectionViewModel];
+    self.tableViewModel.tableView = self.tableView;
 }
 
 #pragma mark - Getter
@@ -45,7 +40,6 @@ UIScrollViewDelegate
         UITableView *tableView = [UITableView new];
         _tableView = tableView;
         [self.view addSubview:_tableView];
-        [_tableView registerClass:RowCell.class forCellReuseIdentifier:NSStringFromClass(RowCell.class)];
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.edges.equalTo(self.view);
@@ -63,34 +57,6 @@ UIScrollViewDelegate
         _minTableHeaderViewHeight = CGRectGetHeight(tableHeaderView.frame);
     }
     return _tableView;
-}
-
-#pragma mark - UITableViewDataSource
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return _viewModel.viewModels.count;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(RowCell.class) forIndexPath:indexPath];
-}
-
-#pragma mark - UITableViewDelegate
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 30.f;
-}
-
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    _viewModel.viewModels[indexPath.row].indexPath = indexPath;
-    ((RowCell *)cell).viewModel = _viewModel.viewModels[indexPath.row];
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 }
 
 #pragma mark - UIScrollViewDelegate

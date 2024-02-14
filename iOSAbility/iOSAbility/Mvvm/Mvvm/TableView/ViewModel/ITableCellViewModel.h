@@ -11,11 +11,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol ITableCellViewModel <NSObject>
 
-@property (weak, nonatomic, nullable) NSIndexPath *tableIndexPath;
-@property (strong, nonatomic, readonly) Class tableCellClass;     // TableView中展示的Cell类。
+@property (weak, nonatomic, readonly) NSIndexPath *tableIndexPath;
 @property (assign, nonatomic, readonly) CGSize tableCellSize;               // 最后一次tableCellHeightForWidth的size。
 
 - (CGFloat)tableCellHeightForWidth:(CGFloat)width;                          // 在计算Table View Cell高度时调用。
+
+#pragma mark - Subclass
+
+@property (strong, nonatomic, readonly) Class tableCellClass;               // TableView中展示的Cell类。
 
 @end
 

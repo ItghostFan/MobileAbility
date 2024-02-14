@@ -15,6 +15,10 @@
 #import "TableHeaderView.h"
 #import "TableFooterView.h"
 
+@interface CellViewModel ()
+@property (weak, nonatomic) NSIndexPath *tableIndexPath;
+@end
+
 @interface TableViewModel () <UITableViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) NSMutableSet *registeredCellIdentifiers;

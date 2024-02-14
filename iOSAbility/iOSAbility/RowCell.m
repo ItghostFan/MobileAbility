@@ -27,9 +27,9 @@
 }
 
 - (void)setViewModel:(RowViewModel *)viewModel {
-    _viewModel = viewModel;
-    self.rowLabel.text = @(_viewModel.indexPath.row).stringValue;
-    self.contentLabel.text = _viewModel.content;
+    [super setViewModel:viewModel];
+    self.rowLabel.text = @(viewModel.tableIndexPath.row).stringValue;
+    self.contentLabel.text = viewModel.content;
 }
 
 #pragma mark - Getter
@@ -64,6 +64,16 @@
         }];
     }
     return _contentLabel;
+}
+
+#pragma mark - TableViewModelCell
+
+- (Class)tableCellClass {
+    return RowCell.class;
+}
+
++ (CGFloat)heightForWidth:(CGFloat *)width viewModel:(CellViewModel *)viewModel {
+    return 30.0f;
 }
 
 @end

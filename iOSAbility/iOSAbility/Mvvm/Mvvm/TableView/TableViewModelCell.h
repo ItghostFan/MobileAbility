@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (weak, nonatomic) CellViewModel *viewModel;
 
-#pragma mark - Subclass If Need
+#pragma mark - Subclass
 
 + (CGFloat)heightForWidth:(CGFloat *)width viewModel:(CellViewModel *)viewModel;
 

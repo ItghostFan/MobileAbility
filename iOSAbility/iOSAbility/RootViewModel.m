@@ -10,20 +10,19 @@
 #import "RowViewModel.h"
 
 @interface RootViewModel ()
-@property (strong, nonatomic) NSMutableArray<__kindof RowViewModel *> *viewModels;
 @end
 
 @implementation RootViewModel
 
-- (instancetype)init {
+- (instancetype)initWithDelegate:(id<ICellViewModelDelegate>)delegate {
     if (self = [super init]) {
         NSString *path = [NSBundle.mainBundle pathForResource:@"RowContents" ofType:@"plist"];
         NSDictionary *rowContents = [NSDictionary dictionaryWithContentsOfFile:path];
-        
-        _viewModels = [NSMutableArray new];
+        [self.sectionViewModels addViewModel:[[SectionViewModel alloc] initWithViewModels:@[]]];
         for (NSString *cls in rowContents.allKeys) {
-            RowViewModel *viewModel = [[NSClassFromString(cls) alloc] initWithRowContents:rowContents];
-            [_viewModels addObject:viewModel];
+            RowViewModel *cellViewModel = [[NSClassFromString(cls) alloc] initWithRowContents:rowContents];
+            cellViewModel.delegate = delegate;
+            [self.sectionViewModels[0] addViewModel:cellViewModel];
         }
     }
     return self;

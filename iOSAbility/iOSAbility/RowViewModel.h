@@ -7,12 +7,13 @@
 
 #import <UIKit/UIKit.h>
 
+#import "CellViewModel+TableView.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
-@interface RowViewModel : NSObject
+@interface RowViewModel : CellViewModel
 
 @property (strong, nonatomic, readonly) NSString *content;
-@property (strong, nonatomic) NSIndexPath *indexPath;
 
 - (instancetype)initWithRowContents:(NSDictionary *)rowContents;
 

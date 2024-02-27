@@ -41,6 +41,14 @@ UICollectionViewDelegate>
 - (void)dealloc {
 }
 
+- (void)setDelegate:(id<ICollectionViewModelDelegate>)delegate {
+    [super setDelegate:delegate];
+}
+
+- (id<ICollectionViewModelDelegate>)delegate {
+    return (id<ICollectionViewModelDelegate>)super.delegate;
+}
+
 #pragma mark - Private
 
 - (void)registerCellClass:(Class)class {
@@ -159,10 +167,16 @@ UICollectionViewDelegate>
     }];
     switch (valueChange) {
         case NSKeyValueChangeSetting: {
+            for (CellViewModel *cellViewModel in news) {
+                [self registerCellClass:cellViewModel.collectionCellClass];
+            }
             [self.collectionView reloadData];
             break;
         }
         case NSKeyValueChangeInsertion: {
+            for (CellViewModel *cellViewModel in news) {
+                [self registerCellClass:cellViewModel.collectionCellClass];
+            }
             [self.collectionView insertItemsAtIndexPaths:indexPathes];
             break;
         }
@@ -265,6 +279,9 @@ UICollectionViewDelegate>
     }
     if (cellViewModel.deselectAfterDidSelect) {
         [collectionView deselectItemAtIndexPath:indexPath animated:NO];
+    }
+    if ([self.delegate respondsToSelector:@selector(collectionView:didSelectItemAtIndexPath:)]) {
+        [self.delegate collectionView:collectionView didSelectItemAtIndexPath:indexPath];
     }
 }
 

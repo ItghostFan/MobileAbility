@@ -16,12 +16,19 @@
 		7839CDA52B79326D006EA28A /* MvvmCollectionFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7839CDA42B79326D006EA28A /* MvvmCollectionFooterView.m */; };
 		7839CDA82B79329B006EA28A /* MvvmCollectionViewModelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7839CDA72B79329B006EA28A /* MvvmCollectionViewModelCell.m */; };
 		7839CDAB2B7939B2006EA28A /* MvvmCollectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7839CDAA2B7939B2006EA28A /* MvvmCollectionController.m */; };
+		7840B4FD2B863A8A00FD2B10 /* DialogsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7840B4FC2B863A8A00FD2B10 /* DialogsController.m */; };
+		7840B5002B863D3D00FD2B10 /* DialogsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7840B4FF2B863D3D00FD2B10 /* DialogsViewModel.m */; };
+		7840B5032B8646A900FD2B10 /* ImViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7840B5022B8646A900FD2B10 /* ImViewModel.m */; };
+		7840B5062B8646D600FD2B10 /* ImController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7840B5052B8646D600FD2B10 /* ImController.m */; };
+		7840B5082B86613A00FD2B10 /* Dialogs.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7840B5072B86613A00FD2B10 /* Dialogs.plist */; };
 		78576BB72B726A230010259E /* MvvmCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 78576BB62B726A230010259E /* MvvmCellViewModel.m */; };
 		78576BBA2B726A450010259E /* MvvmTableViewModelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 78576BB92B726A450010259E /* MvvmTableViewModelCell.m */; };
 		78576BBD2B7272120010259E /* MvvmTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78576BBC2B7272120010259E /* MvvmTableController.m */; };
 		78576BC32B72727A0010259E /* MvvmSectionViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 78576BC22B72727A0010259E /* MvvmSectionViewModel.m */; };
 		78576BC62B7272A00010259E /* MvvmTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78576BC52B7272A00010259E /* MvvmTableHeaderView.m */; };
 		78576BC92B7272BA0010259E /* MvvmTableFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78576BC82B7272BA0010259E /* MvvmTableFooterView.m */; };
+		787E1C272B8E409C004EFCA7 /* MessagesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 787E1C262B8E409C004EFCA7 /* MessagesController.m */; };
+		787E1C2A2B8E415D004EFCA7 /* MessageViewModelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 787E1C292B8E415D004EFCA7 /* MessageViewModelCell.m */; };
 		789731A82B6F6115005C35CB /* MvvmController.m in Sources */ = {isa = PBXBuildFile; fileRef = 789731A72B6F6115005C35CB /* MvvmController.m */; };
 		789731AB2B6F6168005C35CB /* MvvmViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 789731AA2B6F6168005C35CB /* MvvmViewModel.m */; };
 		78BF8DBF2B45AC4E0084C0EC /* BannerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78BF8DBE2B45AC4E0084C0EC /* BannerController.m */; };
@@ -42,6 +49,10 @@
 		78DD9D7A2B39D08700C1943F /* RowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 78DD9D792B39D08700C1943F /* RowCell.m */; };
 		78DD9D7E2B3B1D1600C1943F /* ScrollUpHideTableHeadViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 78DD9D7D2B3B1D1600C1943F /* ScrollUpHideTableHeadViewModel.m */; };
 		78DD9D812B3B1D6400C1943F /* ScrollUpHideTableHeadController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78DD9D802B3B1D6400C1943F /* ScrollUpHideTableHeadController.m */; };
+		78E403382B8CEEE500B8ECEA /* Users.plist in Resources */ = {isa = PBXBuildFile; fileRef = 78E403372B8CEEE500B8ECEA /* Users.plist */; };
+		78E4033C2B8CF11900B8ECEA /* DialogViewModelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E4033B2B8CF11900B8ECEA /* DialogViewModelCell.m */; };
+		78E4033F2B8CF13100B8ECEA /* DialogCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E4033E2B8CF13100B8ECEA /* DialogCellViewModel.m */; };
+		78E403482B8CFDBF00B8ECEA /* MessageCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E403472B8CFDBF00B8ECEA /* MessageCellViewModel.m */; };
 		78FE68A52B7124F10012D460 /* TableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 78FE68812B7124F10012D460 /* TableViewModel.m */; };
 		78FE68A62B7124F10012D460 /* CellViewModel+TableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78FE68822B7124F10012D460 /* CellViewModel+TableView.m */; };
 		78FE68A72B7124F10012D460 /* SectionViewModel+TableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78FE68832B7124F10012D460 /* SectionViewModel+TableView.m */; };
@@ -84,6 +95,15 @@
 		7839CDA72B79329B006EA28A /* MvvmCollectionViewModelCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MvvmCollectionViewModelCell.m; sourceTree = "<group>"; };
 		7839CDA92B7939B2006EA28A /* MvvmCollectionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MvvmCollectionController.h; sourceTree = "<group>"; };
 		7839CDAA2B7939B2006EA28A /* MvvmCollectionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MvvmCollectionController.m; sourceTree = "<group>"; };
+		7840B4FB2B863A8A00FD2B10 /* DialogsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DialogsController.h; sourceTree = "<group>"; };
+		7840B4FC2B863A8A00FD2B10 /* DialogsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DialogsController.m; sourceTree = "<group>"; };
+		7840B4FE2B863D3D00FD2B10 /* DialogsViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DialogsViewModel.h; sourceTree = "<group>"; };
+		7840B4FF2B863D3D00FD2B10 /* DialogsViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DialogsViewModel.m; sourceTree = "<group>"; };
+		7840B5012B8646A900FD2B10 /* ImViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImViewModel.h; sourceTree = "<group>"; };
+		7840B5022B8646A900FD2B10 /* ImViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImViewModel.m; sourceTree = "<group>"; };
+		7840B5042B8646D600FD2B10 /* ImController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImController.h; sourceTree = "<group>"; };
+		7840B5052B8646D600FD2B10 /* ImController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImController.m; sourceTree = "<group>"; };
+		7840B5072B86613A00FD2B10 /* Dialogs.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Dialogs.plist; sourceTree = "<group>"; };
 		78576BB52B726A230010259E /* MvvmCellViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MvvmCellViewModel.h; sourceTree = "<group>"; };
 		78576BB62B726A230010259E /* MvvmCellViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MvvmCellViewModel.m; sourceTree = "<group>"; };
 		78576BB82B726A450010259E /* MvvmTableViewModelCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MvvmTableViewModelCell.h; sourceTree = "<group>"; };
@@ -96,6 +116,10 @@
 		78576BC52B7272A00010259E /* MvvmTableHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MvvmTableHeaderView.m; sourceTree = "<group>"; };
 		78576BC72B7272BA0010259E /* MvvmTableFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MvvmTableFooterView.h; sourceTree = "<group>"; };
 		78576BC82B7272BA0010259E /* MvvmTableFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MvvmTableFooterView.m; sourceTree = "<group>"; };
+		787E1C252B8E409C004EFCA7 /* MessagesController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessagesController.h; sourceTree = "<group>"; };
+		787E1C262B8E409C004EFCA7 /* MessagesController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessagesController.m; sourceTree = "<group>"; };
+		787E1C282B8E415D004EFCA7 /* MessageViewModelCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageViewModelCell.h; sourceTree = "<group>"; };
+		787E1C292B8E415D004EFCA7 /* MessageViewModelCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageViewModelCell.m; sourceTree = "<group>"; };
 		789731A62B6F6115005C35CB /* MvvmController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MvvmController.h; sourceTree = "<group>"; };
 		789731A72B6F6115005C35CB /* MvvmController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MvvmController.m; sourceTree = "<group>"; };
 		789731A92B6F6168005C35CB /* MvvmViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MvvmViewModel.h; sourceTree = "<group>"; };
@@ -136,6 +160,13 @@
 		78DD9D7D2B3B1D1600C1943F /* ScrollUpHideTableHeadViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollUpHideTableHeadViewModel.m; sourceTree = "<group>"; };
 		78DD9D7F2B3B1D6400C1943F /* ScrollUpHideTableHeadController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScrollUpHideTableHeadController.h; sourceTree = "<group>"; };
 		78DD9D802B3B1D6400C1943F /* ScrollUpHideTableHeadController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollUpHideTableHeadController.m; sourceTree = "<group>"; };
+		78E403372B8CEEE500B8ECEA /* Users.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Users.plist; sourceTree = "<group>"; };
+		78E4033A2B8CF11900B8ECEA /* DialogViewModelCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DialogViewModelCell.h; sourceTree = "<group>"; };
+		78E4033B2B8CF11900B8ECEA /* DialogViewModelCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DialogViewModelCell.m; sourceTree = "<group>"; };
+		78E4033D2B8CF13100B8ECEA /* DialogCellViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DialogCellViewModel.h; sourceTree = "<group>"; };
+		78E4033E2B8CF13100B8ECEA /* DialogCellViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DialogCellViewModel.m; sourceTree = "<group>"; };
+		78E403462B8CFDBF00B8ECEA /* MessageCellViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageCellViewModel.h; sourceTree = "<group>"; };
+		78E403472B8CFDBF00B8ECEA /* MessageCellViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageCellViewModel.m; sourceTree = "<group>"; };
 		78FE68812B7124F10012D460 /* TableViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewModel.m; sourceTree = "<group>"; };
 		78FE68822B7124F10012D460 /* CellViewModel+TableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CellViewModel+TableView.m"; sourceTree = "<group>"; };
 		78FE68832B7124F10012D460 /* SectionViewModel+TableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SectionViewModel+TableView.m"; sourceTree = "<group>"; };
@@ -233,16 +264,28 @@
 		7839CDAC2B7CCE95006EA28A /* Im */ = {
 			isa = PBXGroup;
 			children = (
-				7839CDAD2B7CCEBB006EA28A /* ViewModel */,
+				7839CDAD2B7CCEBB006EA28A /* Dialogs */,
+				7840B5012B8646A900FD2B10 /* ImViewModel.h */,
+				7840B5022B8646A900FD2B10 /* ImViewModel.m */,
+				7840B5042B8646D600FD2B10 /* ImController.h */,
+				7840B5052B8646D600FD2B10 /* ImController.m */,
+				78E403372B8CEEE500B8ECEA /* Users.plist */,
 			);
 			path = Im;
 			sourceTree = "<group>";
 		};
-		7839CDAD2B7CCEBB006EA28A /* ViewModel */ = {
+		7839CDAD2B7CCEBB006EA28A /* Dialogs */ = {
 			isa = PBXGroup;
 			children = (
+				78E403452B8CF79B00B8ECEA /* Messages */,
+				78E403392B8CF0D800B8ECEA /* Dialog */,
+				7840B4FB2B863A8A00FD2B10 /* DialogsController.h */,
+				7840B4FC2B863A8A00FD2B10 /* DialogsController.m */,
+				7840B4FE2B863D3D00FD2B10 /* DialogsViewModel.h */,
+				7840B4FF2B863D3D00FD2B10 /* DialogsViewModel.m */,
+				7840B5072B86613A00FD2B10 /* Dialogs.plist */,
 			);
-			path = ViewModel;
+			path = Dialogs;
 			sourceTree = "<group>";
 		};
 		78576BB32B7266C10010259E /* Example */ = {
@@ -368,6 +411,30 @@
 				78DD9D802B3B1D6400C1943F /* ScrollUpHideTableHeadController.m */,
 			);
 			path = ScrollUpHideTableHeadView;
+			sourceTree = "<group>";
+		};
+		78E403392B8CF0D800B8ECEA /* Dialog */ = {
+			isa = PBXGroup;
+			children = (
+				78E4033A2B8CF11900B8ECEA /* DialogViewModelCell.h */,
+				78E4033B2B8CF11900B8ECEA /* DialogViewModelCell.m */,
+				78E4033D2B8CF13100B8ECEA /* DialogCellViewModel.h */,
+				78E4033E2B8CF13100B8ECEA /* DialogCellViewModel.m */,
+			);
+			path = Dialog;
+			sourceTree = "<group>";
+		};
+		78E403452B8CF79B00B8ECEA /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				78E403462B8CFDBF00B8ECEA /* MessageCellViewModel.h */,
+				78E403472B8CFDBF00B8ECEA /* MessageCellViewModel.m */,
+				787E1C282B8E415D004EFCA7 /* MessageViewModelCell.h */,
+				787E1C292B8E415D004EFCA7 /* MessageViewModelCell.m */,
+				787E1C252B8E409C004EFCA7 /* MessagesController.h */,
+				787E1C262B8E409C004EFCA7 /* MessagesController.m */,
+			);
+			path = Messages;
 			sourceTree = "<group>";
 		};
 		78FE687E2B7124F10012D460 /* Mvvm */ = {
@@ -509,7 +576,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				78DD9D5A2B39C16B00C1943F /* LaunchScreen.storyboard in Resources */,
+				78E403382B8CEEE500B8ECEA /* Users.plist in Resources */,
 				78DD9D722B39CA6200C1943F /* RowContents.plist in Resources */,
+				7840B5082B86613A00FD2B10 /* Dialogs.plist in Resources */,
 				78DD9D572B39C16B00C1943F /* Assets.xcassets in Resources */,
 				78DD9D552B39C16A00C1943F /* Main.storyboard in Resources */,
 			);
@@ -551,16 +620,21 @@
 				78FE68AD2B7124F10012D460 /* SectionViewModel+CollectionView.m in Sources */,
 				78576BC62B7272A00010259E /* MvvmTableHeaderView.m in Sources */,
 				78DD9D692B39C68800C1943F /* ScrollUpHideNavigationBarViewModel.m in Sources */,
+				78E403482B8CFDBF00B8ECEA /* MessageCellViewModel.m in Sources */,
 				78FE68AF2B7124F10012D460 /* CollectionViewModel.m in Sources */,
 				78BF8DC22B45AC5F0084C0EC /* BannerView.m in Sources */,
 				78576BBA2B726A450010259E /* MvvmTableViewModelCell.m in Sources */,
+				78E4033F2B8CF13100B8ECEA /* DialogCellViewModel.m in Sources */,
 				78FE68AB2B7124F10012D460 /* TableFooterView.m in Sources */,
+				7840B5002B863D3D00FD2B10 /* DialogsViewModel.m in Sources */,
+				7840B5062B8646D600FD2B10 /* ImController.m in Sources */,
 				78FE68AA2B7124F10012D460 /* TableHeaderView.m in Sources */,
 				7839CDAB2B7939B2006EA28A /* MvvmCollectionController.m in Sources */,
 				78DD9D7A2B39D08700C1943F /* RowCell.m in Sources */,
 				78576BC32B72727A0010259E /* MvvmSectionViewModel.m in Sources */,
 				78576BC92B7272BA0010259E /* MvvmTableFooterView.m in Sources */,
 				78DD9D522B39C16A00C1943F /* RootViewController.m in Sources */,
+				78E4033C2B8CF11900B8ECEA /* DialogViewModelCell.m in Sources */,
 				782DBE7C2B6813F2009A81BD /* RichTextView.m in Sources */,
 				78FE68B02B7124F10012D460 /* CollectionController.m in Sources */,
 				78FE68A62B7124F10012D460 /* CellViewModel+TableView.m in Sources */,
@@ -568,6 +642,7 @@
 				7834C3892B66B6320004C82E /* RichTextViewModel.m in Sources */,
 				78FE68B12B7124F10012D460 /* CollectionFooterView.m in Sources */,
 				78FE68B32B7124F10012D460 /* CollectionViewModelCell.m in Sources */,
+				787E1C2A2B8E415D004EFCA7 /* MessageViewModelCell.m in Sources */,
 				78DD9D4C2B39C16900C1943F /* AppDelegate.m in Sources */,
 				78DD9D6C2B39C6A500C1943F /* ScrollUpHideNavigationBarController.m in Sources */,
 				78FE68AC2B7124F10012D460 /* BaseViewModels.m in Sources */,
@@ -584,9 +659,12 @@
 				78FE68B42B7124F10012D460 /* BaseViewModel.m in Sources */,
 				78FE68B52B7124F10012D460 /* CellViewModel.m in Sources */,
 				78FE68B22B7124F10012D460 /* CollectionHeaderView.m in Sources */,
+				7840B4FD2B863A8A00FD2B10 /* DialogsController.m in Sources */,
 				78BF8DD22B46F8C90084C0EC /* BannerViewModel.m in Sources */,
+				787E1C272B8E409C004EFCA7 /* MessagesController.m in Sources */,
 				78DD9D5D2B39C16B00C1943F /* main.m in Sources */,
 				78576BBD2B7272120010259E /* MvvmTableController.m in Sources */,
+				7840B5032B8646A900FD2B10 /* ImViewModel.m in Sources */,
 				7839CDA52B79326D006EA28A /* MvvmCollectionFooterView.m in Sources */,
 				78576BB72B726A230010259E /* MvvmCellViewModel.m in Sources */,
 				78FE68A92B7124F10012D460 /* TableViewModelCell.m in Sources */,

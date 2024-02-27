@@ -12,5 +12,7 @@
 	<string>富文本</string>
 	<key>MvvmViewModel</key>
 	<string>Mvvm示例</string>
+	<key>ImViewModel</key>
+	<string>Im聊天例子</string>
 </dict>
 </plist>

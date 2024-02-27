@@ -15,7 +15,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class CellViewModel;
 
+@protocol ICollectionViewModelDelegate <UICollectionViewDelegate, IBaseViewModelDelegate>
+
+@end
+
 @interface CollectionViewModel : BaseViewModel
+
+@property (weak, nonatomic, nullable) id<ICollectionViewModelDelegate> delegate;
 
 @property (strong, nonatomic) BaseViewModels<__kindof SectionViewModel<__kindof CellViewModel *> *> *sectionViewModels;
 

@@ -140,10 +140,16 @@
     [self.tableView beginUpdates];
     switch (valueChange) {
         case NSKeyValueChangeSetting: {
+            for (CellViewModel *cellViewModel in news) {
+                [self registerCellClass:cellViewModel.tableCellClass];
+            }
             [self.tableView reloadData];
             break;
         }
         case NSKeyValueChangeInsertion: {
+            for (CellViewModel *cellViewModel in news) {
+                [self registerCellClass:cellViewModel.tableCellClass];
+            }
             [self.tableView insertRowsAtIndexPaths:indexPathes withRowAnimation:UITableViewRowAnimationNone];
             break;
         }
@@ -202,6 +208,9 @@
     }
     if (cellViewModel.deselectAfterDidSelect) {
         [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    }
+    if ([self.delegate respondsToSelector:@selector(tableView:didSelectRowAtIndexPath:)]) {
+        [self.delegate tableView:tableView didSelectRowAtIndexPath:indexPath];
     }
 }
 

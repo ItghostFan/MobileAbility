@@ -12,5 +12,7 @@
 	<string>Rich Text</string>
 	<key>MvvmViewModel</key>
 	<string>Mvvm</string>
+	<key>ImViewModel</key>
+	<string>Im</string>
 </dict>
 </plist>

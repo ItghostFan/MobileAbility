@@ -135,14 +135,14 @@
 
 - (CGSize)intrinsicContentSize {
     CGRect textRect = [_layoutManager boundingRectForGlyphRange:NSMakeRange(0, _layoutManager.numberOfGlyphs) inTextContainer:_textContainer];
-    return textRect.size;
+    return CGSizeMake(ceil(textRect.size.width), ceil(textRect.size.height));
 }
 
 - (CGSize)sizeThatFits:(CGSize)size {
     _textContainer.size = size;
     CGRect textRect = [_layoutManager boundingRectForGlyphRange:NSMakeRange(0, _layoutManager.numberOfGlyphs) inTextContainer:_textContainer];
     _textContainer.size = self.bounds.size;
-    return textRect.size;
+    return CGSizeMake(ceil(textRect.size.width), ceil(textRect.size.height));
 }
 
 - (void)layoutSubviews {

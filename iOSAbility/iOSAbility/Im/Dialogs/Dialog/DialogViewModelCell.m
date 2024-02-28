@@ -10,6 +10,7 @@
 
 #import <Masonry/Masonry.h>
 #import <ReactiveObjC/ReactiveObjC.h>
+#import <SDWebImage/SDWebImage.h>
 
 #import "RichTextView.h"
 
@@ -17,6 +18,7 @@
 @property (weak, nonatomic) RichTextView *nicknameLabel;
 @property (weak, nonatomic) RichTextView *lastMessageLabel;
 @property (weak, nonatomic) UIView *bottomLineView;
+@property (weak, nonatomic) UIImageView *avatarImageView;
 @end
 
 @implementation DialogViewModelCell
@@ -31,6 +33,7 @@
 - (void)setViewModel:(DialogCellViewModel *)viewModel {
     [super setViewModel:viewModel];
     self.nicknameLabel.text = [(id<IDialogCellViewModelDelegate>)viewModel.delegate nicknameOfUid:viewModel.uid];
+    [self.avatarImageView sd_setImageWithURL:[NSURL URLWithString:[(id<IDialogCellViewModelDelegate>)viewModel.delegate avatarUrlOfUid:viewModel.uid]]];
     @weakify(self);
     [[RACObserve(viewModel, lastMessage) takeUntil:self.rac_prepareForReuseSignal] subscribeNext:^(NSString * _Nullable x) {
         @strongify(self);
@@ -44,6 +47,20 @@
 
 #pragma mark - Getter
 
+- (UIImageView *)avatarImageView {
+    if (!_avatarImageView) {
+        UIImageView *avatarImageView = UIImageView.new;
+        _avatarImageView = avatarImageView;
+        [self.contentView addSubview:_avatarImageView];
+        [_avatarImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.leading.equalTo(self.contentView).offset(10.0f);
+            make.bottom.equalTo(self.contentView).offset(-10.0f);
+            make.width.equalTo(_avatarImageView.mas_height);
+        }];
+    }
+    return _avatarImageView;
+}
+
 - (RichTextView *)nicknameLabel {
     if (!_nicknameLabel) {
         RichTextView *nicknameLabel = RichTextView.new;
@@ -51,7 +68,7 @@
         [self.contentView addSubview:_nicknameLabel];
         [_nicknameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.topMargin.mas_equalTo(10.0);
-            make.leadingMargin.mas_equalTo(10.0);
+            make.leading.equalTo(self.avatarImageView.mas_trailing).offset(5.0);
         }];
     }
     return _nicknameLabel;
@@ -63,7 +80,7 @@
         _lastMessageLabel = lastMessageLabel;
         [self.contentView addSubview:_lastMessageLabel];
         [_lastMessageLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.leadingMargin.mas_equalTo(10.0);
+            make.leading.equalTo(self.avatarImageView.mas_trailing).offset(5.0);
             make.bottomMargin.mas_equalTo(-10.0);
         }];
     }

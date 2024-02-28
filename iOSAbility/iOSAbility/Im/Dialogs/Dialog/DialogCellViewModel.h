@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol IDialogCellViewModelDelegate <ICellViewModelDelegate>
 
 - (NSString *)nicknameOfUid:(NSNumber *)uid;
+- (NSString *)avatarUrlOfUid:(NSNumber *)uid;
 
 @end
 

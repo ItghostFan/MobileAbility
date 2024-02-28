@@ -7,21 +7,21 @@
 		<key>Nickname</key>
 		<string>饭宝宝</string>
 		<key>AvatarUrl</key>
-		<string></string>
+		<string>https://github.com/ItghostFan/MobileAbility/blob/main/son@2x.png?raw=true</string>
 	</dict>
 	<key>1</key>
 	<dict>
 		<key>Nickname</key>
 		<string>饭叔叔的夫人</string>
 		<key>AvatarUrl</key>
-		<string></string>
+		<string>https://github.com/ItghostFan/MobileAbility/blob/main/mum@2x.png?raw=true</string>
 	</dict>
 	<key>0</key>
 	<dict>
 		<key>Nickname</key>
 		<string>饭叔叔</string>
 		<key>AvatarUrl</key>
-		<string></string>
+		<string>https://github.com/ItghostFan/MobileAbility/blob/main/dad@2x.png?raw=true</string>
 	</dict>
 </dict>
 </plist>

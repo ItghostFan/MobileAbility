@@ -40,4 +40,8 @@
     return _users[uid.stringValue][@"Nickname"];
 }
 
+- (NSString *)avatarUrlOfUid:(NSNumber *)uid {
+    return _users[uid.stringValue][@"AvatarUrl"];
+}
+
 @end

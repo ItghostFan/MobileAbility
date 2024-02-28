@@ -11,6 +11,7 @@
 #import "DialogCellViewModel.h"
 
 @interface DialogsViewModel () <IDialogCellViewModelDelegate>
+// 👦🏻👩🏻🧔🏻
 @property (strong, nonatomic) NSDictionary<__kindof NSString *, __kindof NSDictionary<__kindof NSString *, __kindof NSString *> *> *users;
 @end
 

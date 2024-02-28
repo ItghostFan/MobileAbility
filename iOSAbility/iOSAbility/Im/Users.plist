@@ -6,16 +6,22 @@
 	<dict>
 		<key>Nickname</key>
 		<string>饭宝宝</string>
+		<key>AvatarUrl</key>
+		<string></string>
 	</dict>
 	<key>1</key>
 	<dict>
 		<key>Nickname</key>
 		<string>饭叔叔的夫人</string>
+		<key>AvatarUrl</key>
+		<string></string>
 	</dict>
 	<key>0</key>
 	<dict>
 		<key>Nickname</key>
 		<string>饭叔叔</string>
+		<key>AvatarUrl</key>
+		<string></string>
 	</dict>
 </dict>
 </plist>

@@ -14,5 +14,7 @@
 	<string>Mvvm示例</string>
 	<key>ImViewModel</key>
 	<string>Im聊天例子</string>
+	<key>AudioViewModel</key>
+	<string>音频录制播放例子</string>
 </dict>
 </plist>

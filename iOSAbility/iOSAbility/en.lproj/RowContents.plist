@@ -14,5 +14,7 @@
 	<string>Mvvm</string>
 	<key>ImViewModel</key>
 	<string>Im</string>
+	<key>AudioViewModel</key>
+	<string>Audio</string>
 </dict>
 </plist>

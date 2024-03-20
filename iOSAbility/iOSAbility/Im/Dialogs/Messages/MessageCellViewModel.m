@@ -25,6 +25,10 @@
     return self;
 }
 
+- (BOOL)isMe {
+    return [_uid isEqualToNumber:@0];
+}
+
 - (Class)tableCellClass {
     return MessageViewModelCell.class;
 }

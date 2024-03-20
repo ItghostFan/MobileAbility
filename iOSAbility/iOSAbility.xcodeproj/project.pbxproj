@@ -21,6 +21,7 @@
 		7840B5032B8646A900FD2B10 /* ImViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7840B5022B8646A900FD2B10 /* ImViewModel.m */; };
 		7840B5062B8646D600FD2B10 /* ImController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7840B5052B8646D600FD2B10 /* ImController.m */; };
 		7840B5082B86613A00FD2B10 /* Dialogs.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7840B5072B86613A00FD2B10 /* Dialogs.plist */; };
+		7843F1C92BAB3A5E0007F9F0 /* AudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7843F1C82BAB3A5E0007F9F0 /* AudioPlayer.m */; };
 		78576BB72B726A230010259E /* MvvmCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 78576BB62B726A230010259E /* MvvmCellViewModel.m */; };
 		78576BBA2B726A450010259E /* MvvmTableViewModelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 78576BB92B726A450010259E /* MvvmTableViewModelCell.m */; };
 		78576BBD2B7272120010259E /* MvvmTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78576BBC2B7272120010259E /* MvvmTableController.m */; };
@@ -34,6 +35,9 @@
 		78BF8DBF2B45AC4E0084C0EC /* BannerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78BF8DBE2B45AC4E0084C0EC /* BannerController.m */; };
 		78BF8DC22B45AC5F0084C0EC /* BannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78BF8DC12B45AC5F0084C0EC /* BannerView.m */; };
 		78BF8DD22B46F8C90084C0EC /* BannerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 78BF8DD12B46F8C90084C0EC /* BannerViewModel.m */; };
+		78DADA352BA89ADC006ADE99 /* AudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78DADA342BA89ADC006ADE99 /* AudioController.m */; };
+		78DADA382BA89AEF006ADE99 /* AudioViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 78DADA372BA89AEF006ADE99 /* AudioViewModel.m */; };
+		78DADA3D2BA89BB0006ADE99 /* AudioRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 78DADA3C2BA89BB0006ADE99 /* AudioRecorder.m */; };
 		78DD9D4C2B39C16900C1943F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 78DD9D4B2B39C16900C1943F /* AppDelegate.m */; };
 		78DD9D4F2B39C16900C1943F /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 78DD9D4E2B39C16900C1943F /* SceneDelegate.m */; };
 		78DD9D522B39C16A00C1943F /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78DD9D512B39C16A00C1943F /* RootViewController.m */; };
@@ -104,6 +108,8 @@
 		7840B5042B8646D600FD2B10 /* ImController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImController.h; sourceTree = "<group>"; };
 		7840B5052B8646D600FD2B10 /* ImController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImController.m; sourceTree = "<group>"; };
 		7840B5072B86613A00FD2B10 /* Dialogs.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Dialogs.plist; sourceTree = "<group>"; };
+		7843F1C72BAB3A5E0007F9F0 /* AudioPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioPlayer.h; sourceTree = "<group>"; };
+		7843F1C82BAB3A5E0007F9F0 /* AudioPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioPlayer.m; sourceTree = "<group>"; };
 		78576BB52B726A230010259E /* MvvmCellViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MvvmCellViewModel.h; sourceTree = "<group>"; };
 		78576BB62B726A230010259E /* MvvmCellViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MvvmCellViewModel.m; sourceTree = "<group>"; };
 		78576BB82B726A450010259E /* MvvmTableViewModelCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MvvmTableViewModelCell.h; sourceTree = "<group>"; };
@@ -130,6 +136,12 @@
 		78BF8DC12B45AC5F0084C0EC /* BannerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BannerView.m; sourceTree = "<group>"; };
 		78BF8DD02B46F8C90084C0EC /* BannerViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BannerViewModel.h; sourceTree = "<group>"; };
 		78BF8DD12B46F8C90084C0EC /* BannerViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BannerViewModel.m; sourceTree = "<group>"; };
+		78DADA332BA89ADC006ADE99 /* AudioController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioController.h; sourceTree = "<group>"; };
+		78DADA342BA89ADC006ADE99 /* AudioController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioController.m; sourceTree = "<group>"; };
+		78DADA362BA89AEF006ADE99 /* AudioViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioViewModel.h; sourceTree = "<group>"; };
+		78DADA372BA89AEF006ADE99 /* AudioViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioViewModel.m; sourceTree = "<group>"; };
+		78DADA3B2BA89BB0006ADE99 /* AudioRecorder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioRecorder.h; sourceTree = "<group>"; };
+		78DADA3C2BA89BB0006ADE99 /* AudioRecorder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioRecorder.m; sourceTree = "<group>"; };
 		78DD9D472B39C16900C1943F /* iOSAbility.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSAbility.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78DD9D4A2B39C16900C1943F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		78DD9D4B2B39C16900C1943F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -342,6 +354,37 @@
 			path = Banner;
 			sourceTree = "<group>";
 		};
+		78DADA322BA89A9F006ADE99 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				78DADA3A2BA89B79006ADE99 /* Recorder */,
+				78DADA392BA89B73006ADE99 /* Player */,
+				78DADA332BA89ADC006ADE99 /* AudioController.h */,
+				78DADA342BA89ADC006ADE99 /* AudioController.m */,
+				78DADA362BA89AEF006ADE99 /* AudioViewModel.h */,
+				78DADA372BA89AEF006ADE99 /* AudioViewModel.m */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		78DADA392BA89B73006ADE99 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				7843F1C72BAB3A5E0007F9F0 /* AudioPlayer.h */,
+				7843F1C82BAB3A5E0007F9F0 /* AudioPlayer.m */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
+		78DADA3A2BA89B79006ADE99 /* Recorder */ = {
+			isa = PBXGroup;
+			children = (
+				78DADA3B2BA89BB0006ADE99 /* AudioRecorder.h */,
+				78DADA3C2BA89BB0006ADE99 /* AudioRecorder.m */,
+			);
+			path = Recorder;
+			sourceTree = "<group>";
+		};
 		78DD9D3E2B39C16900C1943F = {
 			isa = PBXGroup;
 			children = (
@@ -363,6 +406,7 @@
 		78DD9D492B39C16900C1943F /* iOSAbility */ = {
 			isa = PBXGroup;
 			children = (
+				78DADA322BA89A9F006ADE99 /* Audio */,
 				7839CDAC2B7CCE95006EA28A /* Im */,
 				7897319C2B6F5C1C005C35CB /* Mvvm */,
 				7834C3832B66B5EA0004C82E /* RichText */,
@@ -641,6 +685,7 @@
 				78E403482B8CFDBF00B8ECEA /* MessageCellViewModel.m in Sources */,
 				78FE68AF2B7124F10012D460 /* CollectionViewModel.m in Sources */,
 				78BF8DC22B45AC5F0084C0EC /* BannerView.m in Sources */,
+				7843F1C92BAB3A5E0007F9F0 /* AudioPlayer.m in Sources */,
 				78576BBA2B726A450010259E /* MvvmTableViewModelCell.m in Sources */,
 				78E4033F2B8CF13100B8ECEA /* DialogCellViewModel.m in Sources */,
 				78FE68AB2B7124F10012D460 /* TableFooterView.m in Sources */,
@@ -685,7 +730,10 @@
 				7840B5032B8646A900FD2B10 /* ImViewModel.m in Sources */,
 				7839CDA52B79326D006EA28A /* MvvmCollectionFooterView.m in Sources */,
 				78576BB72B726A230010259E /* MvvmCellViewModel.m in Sources */,
+				78DADA382BA89AEF006ADE99 /* AudioViewModel.m in Sources */,
+				78DADA352BA89ADC006ADE99 /* AudioController.m in Sources */,
 				78FE68A92B7124F10012D460 /* TableViewModelCell.m in Sources */,
+				78DADA3D2BA89BB0006ADE99 /* AudioRecorder.m in Sources */,
 				78DD9D4F2B39C16900C1943F /* SceneDelegate.m in Sources */,
 				7834C3862B66B6190004C82E /* RichTextController.m in Sources */,
 				78FE68AE2B7124F10012D460 /* CellViewModel+CollectionView.m in Sources */,
@@ -856,6 +904,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iOSAbility/Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "使用录音";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -886,6 +935,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iOSAbility/Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "使用录音";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

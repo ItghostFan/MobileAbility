@@ -17,6 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic, readonly) NSNumber *from;
 @property (strong, nonatomic, readonly) NSString *message;
 
+@property (assign, nonatomic, readonly) BOOL isMe;
+
 @property (weak, nonatomic, readonly) id<IDialogCellViewModelDelegate> dialogDelegate;
 
 - (instancetype)initWithUid:(NSNumber *)uid

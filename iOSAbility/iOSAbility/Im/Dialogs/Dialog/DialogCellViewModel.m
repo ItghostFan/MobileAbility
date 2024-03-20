@@ -27,7 +27,7 @@
         _messagesViewModel = TableViewModel.new;
         SectionViewModel *sectionViewModel = SectionViewModel.new;
         for (NSDictionary *message in messages) {
-            MessageCellViewModel *cellViewModel = [[MessageCellViewModel alloc] initWithUid:self.uid message:message dialogDelegate:delegate];
+            MessageCellViewModel *cellViewModel = [[MessageCellViewModel alloc] initWithUid:message[@"From"] message:message dialogDelegate:delegate];
             [sectionViewModel addViewModel:cellViewModel];
         }
         @weakify(self);

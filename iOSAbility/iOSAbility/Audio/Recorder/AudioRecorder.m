@@ -30,6 +30,7 @@
         _recorder = [[AVAudioRecorder alloc] initWithURL:url settings:setting error:&error];
         NSAssert(!error, @"Check %@!", error);
         _recorder.meteringEnabled = YES;
+        _recorder.delegate = self;
     }
     return self;
 }

@@ -24,6 +24,7 @@
         _player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
         NSAssert(!error, @"Check %@!", error);
         _player.meteringEnabled = YES;
+        _player.delegate = self;
     }
     return self;
 }

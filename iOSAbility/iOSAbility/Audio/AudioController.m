@@ -52,14 +52,16 @@
     _recorder = [[AudioRecorder alloc] initWithPath:recordPath];
     [_recorder startRecordDuration:10.0f];
     @weakify(self);
-    [[RACObserve(_recorder, state) takeUntil:RACObserve(self, recorder)] subscribeNext:^(NSNumber * _Nullable state) {
+    [[RACObserve(_recorder, state) takeUntil:_recorder.rac_willDeallocSignal] subscribeNext:^(NSNumber * _Nullable state) {
         @strongify(self);
         switch (state.integerValue) {
             case AudioRecorderStateStop: {
                 self.recorder = nil;
+                [self.recordButton setTitle:NSLocalizedString(@"Record", nil) forState:UIControlStateNormal];
                 break;
             }
             case AudioRecorderStateRecording: {
+                [self.recordButton setTitle:NSLocalizedString(@"Stop", nil) forState:UIControlStateNormal];
                 break;
             }
             default: {
@@ -71,20 +73,22 @@
 
 - (void)onPlayClicked:(id)sender {
     if (self.player.state == AudioPlayerStatePlaying) {
-        [self.recorder stopRecord];
+        [self.player stopPlay];
         return;
     }
     _player = [[AudioPlayer alloc] initWithPath:self.audioPathTextView.text];
     [_player startPlay];
     @weakify(self);
-    [[RACObserve(_player, state) takeUntil:RACObserve(self, player)] subscribeNext:^(NSNumber * _Nullable state) {
+    [[RACObserve(_player, state) takeUntil:_player.rac_willDeallocSignal] subscribeNext:^(NSNumber * _Nullable state) {
         @strongify(self);
         switch (state.integerValue) {
             case AudioPlayerStateStop: {
                 self.player = nil;
+                [self.playButton setTitle:NSLocalizedString(@"Play", nil) forState:UIControlStateNormal];
                 break;
             }
             case AudioPlayerStatePlaying: {
+                [self.playButton setTitle:NSLocalizedString(@"Stop", nil) forState:UIControlStateNormal];
                 break;
             }
             default: {
@@ -120,6 +124,8 @@
     if (!_recordButton) {
         UIButton *recordButton = UIButton.new;
         _recordButton = recordButton;
+        [_recordButton setTitle:NSLocalizedString(@"Record", nil) forState:UIControlStateNormal];
+        [_recordButton setTitleColor:UIColor.redColor forState:UIControlStateNormal];
         [self.view addSubview:_recordButton];
         [_recordButton mas_makeConstraints:^(MASConstraintMaker *make) {
             make.trailing.equalTo(self.view.mas_centerX).offset(-5.0f);
@@ -135,6 +141,8 @@
     if (!_playButton) {
         UIButton *playButton = UIButton.new;
         _playButton = playButton;
+        [_playButton setTitle:NSLocalizedString(@"Play", nil) forState:UIControlStateNormal];
+        [_playButton setTitleColor:UIColor.redColor forState:UIControlStateNormal];
         [self.view addSubview:_playButton];
         [_playButton mas_makeConstraints:^(MASConstraintMaker *make) {
             make.leading.equalTo(self.view.mas_centerX).offset(5.0f);

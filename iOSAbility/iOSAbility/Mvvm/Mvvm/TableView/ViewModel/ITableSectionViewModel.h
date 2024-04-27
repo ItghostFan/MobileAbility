@@ -12,8 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol ITableSectionViewModel <NSObject>
 
 @property (assign, nonatomic) NSInteger tableSection;
-@property (strong, nonatomic, readonly) Class tableHeaderClass;
-@property (strong, nonatomic, readonly) Class tableFooterClass;
+@property (strong, nonatomic, nullable, readonly) Class tableHeaderClass;
+@property (strong, nonatomic, nullable, readonly) Class tableFooterClass;
 
 - (CGFloat)tableHeaderHeightForWidth:(CGFloat)width;
 - (CGFloat)tableFooterHeightForWidth:(CGFloat)width;

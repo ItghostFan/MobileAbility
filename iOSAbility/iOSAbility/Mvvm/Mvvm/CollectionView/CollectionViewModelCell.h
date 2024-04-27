@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CollectionViewModelCell : UICollectionViewCell
 
-@property (weak, nonatomic) CellViewModel *viewModel;
+@property (weak, nonatomic, nullable) CellViewModel *viewModel;
 
 + (CGSize)cellSizeForSize:(CGSize *)size viewModel:(CellViewModel *)viewModel;
 

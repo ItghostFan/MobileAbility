@@ -21,8 +21,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - Subclass
 
-@property (strong, nonatomic, readonly) Class collectionHeaderClass;
-@property (strong, nonatomic, readonly) Class collectionFooterClass;
+@property (strong, nonatomic, nullable, readonly) Class collectionHeaderClass;
+@property (strong, nonatomic, nullable, readonly) Class collectionFooterClass;
 
 - (CGSize)collectionHeaderSizeForSize:(CGSize)size;
 - (CGSize)collectionFooterSizeForSize:(CGSize)size;

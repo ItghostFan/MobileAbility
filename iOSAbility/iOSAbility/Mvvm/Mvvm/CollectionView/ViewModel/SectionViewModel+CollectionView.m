@@ -14,8 +14,8 @@
 
 @interface SectionViewModel ()
 
-@property (strong, nonatomic, readonly) NSMutableDictionary<__kindof NSValue *, __kindof NSValue *> *sizeHeaderSizes;
-@property (strong, nonatomic, readonly) NSMutableDictionary<__kindof NSValue *, __kindof NSValue *> *sizeFooterSizes;
+@property (strong, nonatomic, nonnull, readonly) NSMutableDictionary<__kindof NSValue *, __kindof NSValue *> *sizeHeaderSizes;
+@property (strong, nonatomic, nonnull, readonly) NSMutableDictionary<__kindof NSValue *, __kindof NSValue *> *sizeFooterSizes;
 
 @property (assign, nonatomic) CGSize collectionHeaderSize;               // 最后一次collectionHeaderSizeForSize:的size。
 @property (assign, nonatomic) CGSize collectionFooterSize;               // 最后一次collectionFooterSizeForSize:的size。

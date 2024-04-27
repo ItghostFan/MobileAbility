@@ -13,14 +13,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface BaseViewModels<__covariant ObjectType> : BaseViewModel
 
-@property (strong, nonatomic, readonly) NSArray<ObjectType> *viewModels;
+@property (strong, nonatomic, nonnull, readonly) NSArray<ObjectType> *viewModels;
 
 - (instancetype)initWithViewModels:(NSArray<ObjectType> *)viewModels;
 
 - (void)addViewModel:(ObjectType)viewModel;
 - (void)insertViewModel:(ObjectType)viewModel atIndex:(NSUInteger)index;
 - (void)replaceViewModelAtIndex:(NSUInteger)index withViewModel:(ObjectType)viewModel;
-//- (void)insertViewModels:(NSArray<ObjectType> *)viewModels atIndexes:(NSIndexSet *)indexes;
+//- (void)insertViewModels:(NSArray<ObjectType> *)viewModels atIndexes:(NSIndexSet *)indexes;   // iOS这个地方会导致死循环
 - (void)removeViewModel:(ObjectType)viewModel;
 - (void)removeViewModelsAtIndexes:(NSIndexSet *)indexes;
 - (void)removeViewModels:(NSArray<ObjectType> *)viewModels;

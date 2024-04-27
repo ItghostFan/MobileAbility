@@ -25,7 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (strong, nonatomic) BaseViewModels<__kindof SectionViewModel<__kindof CellViewModel *> *> *sectionViewModels;
 
-@property (weak, nonatomic) UITableView *tableView;
+@property (weak, nonatomic, nullable) UITableView *tableView;
 
 @end
 

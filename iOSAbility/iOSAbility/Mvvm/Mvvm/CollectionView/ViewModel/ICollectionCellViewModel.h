@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (weak, nonatomic, nullable) NSIndexPath *collectionIndexPath;
 @property (assign, nonatomic, readonly) CGSize collectionCellSize;               // 最后一次collectionCellSizeForSize:的size。
-@property (strong, nonatomic, readonly, nullable) Class collectionCellClass;
+@property (strong, nonatomic, nonnull, readonly) Class collectionCellClass;
 
 - (CGSize)collectionCellSizeForSize:(CGSize)size;                          // 在计算Collection View Cell高度时调用。
 

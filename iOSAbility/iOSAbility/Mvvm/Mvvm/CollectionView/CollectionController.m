@@ -35,7 +35,7 @@
     if (!_flowLayout) {
         _flowLayout = UICollectionViewFlowLayout.new;
         _flowLayout.minimumLineSpacing = 0.0f;
-        _flowLayout.itemSize = CGSizeZero;
+        _flowLayout.itemSize = CGSizeMake(1.0f, 1.0f);
         _flowLayout.minimumInteritemSpacing = 5.0f;
         _flowLayout.minimumLineSpacing = 5.0f;
         _flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;

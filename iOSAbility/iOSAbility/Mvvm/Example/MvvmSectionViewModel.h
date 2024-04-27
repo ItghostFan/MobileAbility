@@ -13,7 +13,6 @@ NS_ASSUME_NONNULL_BEGIN
 @interface MvvmSectionViewModel : SectionViewModel
 
 @property (assign, nonatomic) CGFloat collectionMinimumLineSpacing;
-
 @property (assign, nonatomic) CGFloat collectionMinimumInteritemSpacing;
 
 @end

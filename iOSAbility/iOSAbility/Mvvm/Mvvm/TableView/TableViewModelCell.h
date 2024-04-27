@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TableViewModelCell : UITableViewCell
 
-@property (weak, nonatomic) CellViewModel *viewModel;
+@property (weak, nonatomic, nullable) CellViewModel *viewModel;
 
 #pragma mark - Subclass
 

@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (strong, nonatomic, readonly) UICollectionView *collectionView;
 
-@property (strong, nonatomic) CollectionViewModel *viewModel;
+@property (strong, nonatomic, nullable) CollectionViewModel *viewModel;
 
 @end
 

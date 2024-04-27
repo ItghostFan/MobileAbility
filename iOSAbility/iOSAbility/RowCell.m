@@ -59,7 +59,7 @@
         [self.contentView addSubview:_contentLabel];
         [_contentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.leading.equalTo(self.rowLabel.mas_trailing).offset(5.0f);
-            make.trailing.equalTo(self.contentView).offset(-5.0f);
+//            make.right.equalTo(self.contentView).offset(-5.0f);
             make.bottom.equalTo(self.rowLabel);
         }];
     }

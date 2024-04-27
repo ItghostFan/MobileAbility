@@ -20,9 +20,9 @@ UICollectionViewDelegateFlowLayout,
 UICollectionViewDataSource,
 UICollectionViewDelegate>
 
-@property (strong, nonatomic) NSMutableSet *registeredCellIdentifiers;
-@property (strong, nonatomic) NSMutableSet *registeredHeaderIdentifiers;
-@property (strong, nonatomic) NSMutableSet *registeredFooterIdentifiers;
+@property (strong, nonatomic, nonnull) NSMutableSet *registeredCellIdentifiers;
+@property (strong, nonatomic, nonnull) NSMutableSet *registeredHeaderIdentifiers;
+@property (strong, nonatomic, nonnull) NSMutableSet *registeredFooterIdentifiers;
 
 @end
 
